@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>pgksunilkumar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+         
+         body{ background-color:#fff;}
+         .main-bg{ background-color:#666; padding-right:3px; padding-top:3px; padding-bottom:3px;}
+         .open > .dropdown-menu {
+         -webkit-transform: scale(1, 1);
+         transform: scale(1, 1);  
+         opacity:1;
+         }
+         .dropdown-menu {
+         opacity:.3;
+         -webkit-transform-origin: bottom;
+         transform-origin: bottom;
+         -webkit-animation-fill-mode: forwards;  
+         animation-fill-mode: forwards; 
+         -webkit-transform: scale(1, 0);
+         display: block; 
+         transition: all 0.2s linear;
+         -webkit-transition: all 0.2s linear;
+         box-shadow:none !important;
+         }
+         .flmenu{
+         width: 160px!important;
+         height: 100px!important;
+         margin:5px;
+         display:block !important;
+         padding-top:23px;
+         color:#f5f5f5;
+         border:2px solid transparent;
+         }
+         .span-icon{ font-size:20px;}
+         .flmenu:hover{ background-color:#f5f5f5 !important; cursor:pointer; color:#CCCCCC;border-color:rgba(161,161,161,0.5);}
+         .flmenu1{
+         background-color: #000000;
+         }
+         .flmenu2{
+         background-color: #00B159;
+         }
+         .flmenu3{
+         background-color: #00AEDB;
+         }
+         .flmenu4{
+         background-color: #F37735;
+         }
+         .flmenu5{
+         background-color: #EC098C;
+         }
+         .flmenu6{
+         background-color: #314E6C;
+         }
+         .flmenu7{
+         background-color: #44A5AC;
+         }
+         .flmenu8{
+         background-color: #297E83;
+         }
+         .flmenu9{
+         background-color:#CC3366;
+         }
+         .flmenu10{
+         background-color: #C9312C;
+         }
+         .flmenu11{
+         background-color:#6699CC;
+         }
+         .flmenu12{
+         background-color: #7C4199;
+         }
+         .flmenu13{
+         background-color: #FFC425;
+         }
+         .flmenu14{
+         background-color: #034A8C;
+         }
+         .flmenu15{
+         background-color: #E59B18;
+         }
+         .flmenu16{
+         background-color: #006054;
+         }
+         .flmenu17{
+         background-color: #44A5AC;
+         }
+         .flmenu18{
+         background-color: #336797;
+         }
+         .flmenu19{
+         background-color: #3B3E45;
+         }
+         .start-btn{
+         padding: 8px 30px;
+         border: 0;
+         border-radius:1px !important;
+         text-transform: uppercase;
+         text-decoration: none;
+         transition: 0.2s ease;
+         box-shadow:0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
+         outline: none!important;}
+         .start-btn:hover{ box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)}
+         .start-btn:active{}
+         #startmenu{width:1050px !important;background:none; !important;position: absolute; border:none;}
+         @media screen and (max-width: 767px) {
+         #startmenu{ width:200px !important;}
+         }
+         .started-bar {
+         position:fixed;
+         width: 100%;
+         bottom:0;
+         background-color: #7c7c7c;
+         padding-top:2px;
+         padding-bottom:2px;
+         padding-left:18px;
+         }
+         .left-list-flmenu{
+         width:300px !important;
+         height: 50px!important;
+         margin:5px;
+         display:block !important;
+         color:#f5f5f5;
+         }
+         .left-list-flmenu:hover{ background-color:#f5f5f5; color:#7c7c7c; cursor:pointer;}
+         .left-list-flmenu-icon{ font-size:30px; margin-top:7px; float:left;}
+         .left-list-cat-name{ font-size:15px; font-weight:400 !important; margin-left:40px; margin-top:7px; float:left;}
+         .left-user-flmenu{
+         width:300px !important;
+         height: 50px!important;
+         margin:5px;
+         display:block !important;
+         color:#f5f5f5;
+         border-bottom:1px solid #999;
+         padding-bottom:55px;
+         }
+         .left-user-flmenu:hover{ background-color:#f5f5f5; color:#7c7c7c; cursor:pointer;}
+         .left-user-flmenu-icon{ font-size:25px; margin-top:2px; float:right; padding:10px;}
+         .left-user-flmenu-icon:hover{ background-color:#ccc; color:#f5f5f5; cursor:pointer; border-radius:2px;}
+         .left-user-name{ font-size:25px; font-weight:400 !important; margin-left:10px; margin-top:7px; float:left;}
+         .user-pic{float:left; width:40px; margin-top:5px; border-radius:2px;}
+         .left-search-flmenu{
+         width:300px !important;
+         height: 50px!important;
+         display:block !important;
+         color:#7c7c7c;
+         }
+         .search{ border:none; width:300px; height:40px; text-indent:10px; font-size:17px; border-radius:1px;}
+         .search:focus
+         {
+         outline:0px !important;
+         -webkit-appearance:none;
+         }
+         .left-user-flmenu{
+         width:300px !important;
+         height: 50px!important;
+         margin:5px;
+         display:block !important;
+         color:#f5f5f5;
+         }
+         .lg-flmenu{
+         width: 330px!important;
+         height: 210px!important;
+         margin:5px;
+         display:block !important;
+         padding-top:60px;
+         color:#f5f5f5;
+         border:2px solid transparent;
+         }
+         .lg-flmenu:hover{
+         background-color:#f5f5f5; cursor:pointer; color:#CCCCCC;border-color:rgba(161,161,161,0.5);
+         }
+         .lg-span-icon{ font-size:50px;}
+         .lg-title{ font-size:34px;}
+         .md-flmenu{
+         width: 160px!important;
+         height: 210px!important;
+         margin:5px;
+         display:block !important;
+         padding-top:60px;
+         color:#f5f5f5;
+         border:2px solid transparent;
+         }
+         .md-flmenu:hover{
+         background-color:#f5f5f5; cursor:pointer; color:#CCCCCC;border-color:rgba(161,161,161,0.5);
+         }
+         .md-span-icon{ font-size:60px;}
+         .md-title{ font-size:25px;}
+         #fl-scroll::-webkit-scrollbar-track
+         {
+         -webkit-box-shadow:none;
+         background-color:none;
+         }
+         #fl-scroll::-webkit-scrollbar
+         {
+         width: 7px;
+         background-color:none;
+         }
+         #fl-scroll::-webkit-scrollbar-thumb
+         {
+         background-color: #333;
+         }
+         .author{ font-size:60px; margin-left:280px; margin-top:250px;  color:#999; font-weight:bold;}
+         .time{ font-size:25px; color:#f5f5f5; float:right;}
+         .volume {
+         transform: rotate(-90deg);
+         }
+         .volume:before {
+         content: " ";
+         }
+         .volume input[type=range] {
+         outline: none;
+         -webkit-appearance: none;
+         padding: 2px;
+         background-color:#fff;
+         border:10px solid rgba(0,0,0,0.4);
+         position: relative;
+         margin: 0;
+         cursor: pointer;
+         }
+         .volume input[type=range]::-webkit-slider-thumb {
+         -webkit-appearance: none;
+         background:#66CCCC;
+         height: 15px;
+         width: 15px;
+         border-radius: 10%;
+         }
+         .volume input[type=range]::-moz-range-track {
+         border: none;
+         background:none;
+         }
+         .volume input[type=range]::-moz-range-thumb {
+         background:#66CCCC;
+         height: 20px;
+         width: 20px;
+         border-radius: 10%;
+         }
+         .volume input[type=range]::-ms-fill-lower, .volume input[type=range]::-ms-fill-upper {
+         background: transparent;
+         }
+         .volume input[type=range]::-ms-track {
+         height: 18px;
+         border: none;
+         background:none;
+         margin: 0;
+         }
+         .volume input[type=range]::-ms-thumb {
+         background:#66CCCC;
+         height: 20px;
+         width: 20px;
+         border-radius: 10%;
+         }
+         .volume-settings{ margin-top:-100px !important; position:fixed;}
+         .volume-none{ background:none !important; border:none !important; margin-left:50px;}
+         .volume-bg{ }
+         .info-volume{ font-size:40px; float:right; position:fixed; margin-top:-210px; margin-left:58px;}
+         .volume-icon{font-size:35px; float:left; margin-left:15px; color:#f5f5f5; cursor:pointer}
+         .volume-icon:hover{ color:#CCCCCC;}
+         .show-icons-all{font-size:15px; float:left; margin-top:13px; color:#f5f5f5; cursor:pointer;   transform: rotate(-90deg); margin-left:35px;}
+         .network-icon{font-size:23px; float:left; margin-left:10px; color:#f5f5f5; cursor:pointer; margin-top:5px;}
+         .noti-show{ padding:10px; padding-left:20px; padding-right:20px; background-color:rgba(0,0,0,0.1); border:10px solid rgba(0,0,0,0.2);}
+         .noti-icon{}
+         .noti-show-icon{ padding:10px; font-size:20px; cursor:pointer;}
+         .noti-show-icon:hover{ background-color:#f5f5f5; color:#999999; border-radius:3px;}
+         .noti-main{background:none !important; border:none !important;}
+         .network-outer-part{background:none !important; border:none !important;}
+         .network-main{padding:5px; padding-left:20px; padding-right:20px; border:2px solid rgba(0,0,0,0.1); background:#888;}
+         .network-avail{
+         width:300px !important;
+         height: 40px!important;
+         margin:5px;
+         display:block !important;
+         color:#f5f5f5;
+         }
+         .network-avail:hover{ background-color:#f5f5f5; color:#7c7c7c; cursor:pointer;}
+         .network-avail:active{ border:5px solid transparent;}
+         .network-avail-icon{ font-size:20px; margin-top:10px; float:left;}
+         .network-avail-name{ font-size:20px; font-weight:400 !important; margin-left:10px; margin-top:7px; float:left;}
+         .net-set-icon{ float:left;}
+         .net-set-btn{}
+         .net-set-icon-aero{  transform: rotate(90deg); float:left; font-size:15px;}
+         .modal-dialog{ width:95% !important; height:90% !important; margin-top:-8px;padding:0px !important; }
+         .modal-content {
+         position: relative;
+         background-color:rgba(0,191,255,0.7) !important;
+         border:0px !important;
+         border:0px !important;
+         border-radius: 0;
+         box-shadow:none !important;
+         }
+         /*.modal{ overflow:hidden !important; border-left:10px solid #6699FF;border-right:10px solid #6699FF;border-bottom:10px solid #6699FF}*/
+         /*.modal-header{ background-color:#6699FF;}*/
+         .window-icon{ float:left; border-radius:2px;}
+         .window-title{ margin-left:200px; font-size:25px !important; color:#444; font-weight:bold;}
+         .window-close-btn{ padding:2px !important; margin-top:-10px !important; float:right; width:50px; font-size:15px;}
+         .window-close-btn:hover{ padding:5px; background-color:#FF3300;}
+         .window-btn-all{ background:none; padding:2px !important; margin-top:-10px !important; float:right; width:35px; font-size:15px;}
+         .window-btn-all:hover{ background-color:#6666FF; color:#fff;}
+         /*.modal-body{  height:100% !important; width:100% !important}*/
+         .ms-header-tilte{ height:1px; border:none !important}
+         .ms-footer{}
+         .ms-main-outer-part{}
+         .ms-window{}
+         .ms-window-title{margin-left:500px; font-size:25px !important; color:#444; font-weight:bold;}
+         .actions {
+         list-style: none;
+         padding: 0;
+         z-index: 2;
+         margin: 0;
+         }
+         .actions > li {
+         display: inline-block;
+         vertical-align: baseline;
+         }
+         .actions > li > a,
+         .actions > a {
+         width: 30px;
+         height: 30px;
+         line-height: 35px;
+         display: inline-block;
+         text-align: center;
+         position: relative;
+         }
+         .actions > li > a > i,
+         .actions > a > i {
+         -webkit-transition: color;
+         -o-transition: color;
+         transition: color;
+         -webkit-transition-duration: 1300ms;
+         transition-duration: 1300ms;
+         color: #adadad;
+         font-size: 20px;
+         }
+         .actions > li > a:hover > i,
+         .actions > a:hover > i {
+         color: #000;
+         }
+         .actions > li > a:before,
+         .actions > a:before {
+         left: 0;
+         top: 0;
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         -webkit-transform: scale3d(0, 0, 0);
+         -moz-transform: scale3d(0, 0, 0);
+         -ms-transform: scale3d(0, 0, 0);
+         -o-transform: scale3d(0, 0, 0);
+         transform: scale3d(0, 0, 0);
+         -webkit-transition: all;
+         -o-transition: all;
+         transition: all;
+         -webkit-transition-duration: 250ms;
+         transition-duration: 250ms;
+         -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+         backface-visibility: hidden;
+         background-color: rgba(0, 0, 0, 0.1);
+         z-index: 0;
+         border-radius: 50%;
+         opacity: 0;
+         filter: alpha(opacity=0);
+         }
+         .actions > li > a:hover:before,
+         .actions > a:hover:before {
+         -webkit-transform: scale3d(1, 1, 1);
+         -moz-transform: scale3d(1, 1, 1);
+         -ms-transform: scale3d(1, 1, 1);
+         -o-transform: scale3d(1, 1, 1);
+         transform: scale3d(1, 1, 1);
+         opacity: 1;
+         filter: alpha(opacity=100);
+         }
+         .actions > li.open > a > i,
+         .actions.open > a > i {
+         color: #000;
+         }
+         .actions > li.open > a:before,
+         .actions.open > a:before {
+         -webkit-transform: scale(1);
+         -ms-transform: scale(1);
+         -o-transform: scale(1);
+         transform: scale(1);
+         opacity: 1;
+         filter: alpha(opacity=100);
+         }
+         .actions.actions-alt > li > a > i {
+         color: #fff;
+         }
+         .actions.actions-alt > li > a > i:hover {
+         color: #fff;
+         }
+         .actions.actions-alt > li.open > a > i {
+         color: #fff;
+         }
+         .actions.open {
+         z-index: 3;
+         }
+         .line-wrap {
+         width: 18px;
+         height: 12px;
+         -webkit-transition: all;
+         -o-transition: all;
+         transition: all;
+         -webkit-transition-duration: 300ms;
+         transition-duration: 300ms;
+         margin: 10px 20px;
+         }
+         .line-wrap .line {
+         width: 18px;
+         height: 2px;
+         -webkit-transition: all;
+         -o-transition: all;
+         transition: all;
+         -webkit-transition-duration: 300ms;
+         transition-duration: 300ms;
+         }
+         .line-wrap .line.center {
+         margin: 3px 0;
+         }
+         .open .line-wrap {
+         -webkit-transform: rotate(180deg);
+         -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+         transform: rotate(180deg);
+         }
+         .open .line-wrap .line.top {
+         width: 12px;
+         transform: translateX(8px) translateY(1px) rotate(45deg);
+         -webkit-transform: translateX(8px) translateY(1px) rotate(45deg);
+         }
+         .open .line-wrap .line.bottom {
+         width: 12px;
+         transform: translateX(8px) translateY(-1px) rotate(-45deg);
+         -webkit-transform: translateX(8px) translateY(-1px) rotate(-45deg);
+         }
+         .listview{position:relative}.listview:not(.lv-lg):not(.lv-message) .lv-item{padding:12px 20px}
+         @media (min-width: 480px){.listview.lv-lg .lv-item{padding:17px 35px 17px 25px}}
+         @media (max-width: 767px){.listview.lv-lg .lv-item{padding:17px 35px 17px 20px}}
+         .listview.lv-lg .lv-item:hover{background-color:#FFFFDB}
+         .listview .lv-item{position:relative;display:block;-webkit-transition:background-color;-o-transition:background-color;transition:background-color;-webkit-transition-duration:300ms;transition-duration:300ms}
+         .listview .lv-item .lv-small{font-size:12px;color:#A9A9A9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;width:100%}
+         .listview .lv-item .checkbox,.listview .lv-item.media{margin:0}
+         .lvh-search-close:hover{background:#333}
+         .lv-header-alt{position:relative;background:#f8f8f8;padding:15px}
+         .lv-header-alt .lv-actions{z-index:3;float:right;margin-top:3px;position:relative}
+         .lv-header-alt .lv-actions > li > a{margin:0 3px}
+         .lvh-label{color:#818181;display:inline-block;margin:0;font-size:14px;font-weight:400;padding:0 6px;line-height:33px;vertical-align:middle}
+         .lv-footer{display:block;text-align:center;padding:7px 10px 8px;border-top:1px solid #F0F0F0;line-height:100%;font-size:11px;margin-top:20px;color:#828282}.card{position:relative;background:#fff;margin-bottom:30px}
+         .#messages-main:before,#messages-main:after{content:" ";display:table}
+         #messages-main:after{clear:both}#messages-main .ms-block{padding:23px 20px 0}
+         #messages-main .ms-menu{position:absolute;left:0;top:0;background:#F8F8F8;border-right:1px solid #EEE;padding-bottom:50px;height:100%;width:240px;-webkit-transition:all;-o-transition:all;transition:all;-webkit-transition-duration:250ms;transition-duration:250ms}
+         @media (max-width: 767px){#messages-main .ms-menu{height:calc(100% - 58px);-webkit-transform:translate3d(-240px,58px,0);transform:translate3d(-240px,58px,0);opacity:0;filter:alpha(opacity=0);z-index:1}
+         #messages-main .ms-menu.toggled{-webkit-transform:translate3d(0,58px,0);transform:translate3d(0,58px,0);opacity:1;filter:alpha(opacity=100)}}#messages-main .ms-menu .lv-item.active{background:#fff}
+         #messages-main .ms-menu .lv-item:not(.active):hover{background:#F2F2F2;cursor:pointer}
+         @media (min-width: 768px){#messages-main .ms-body{padding-left:240px}}
+         @media (max-width: 767px){#messages-main .ms-body{overflow:hidden}}
+         #messages-main .ms-user:before,#messages-main .ms-user:after{content:" ";display:table}
+         #messages-main .ms-user:after{clear:both}
+         #messages-main .ms-user:before,#messages-main .ms-user:after{content:" ";display:table}
+         #messages-main .ms-user:after{clear:both}
+         #messages-main .ms-user > img{border-radius:50%;width:40px;float:left}
+         #messages-main .ms-user > div{overflow:hidden;padding:7px 5px 7px 15px;font-size:11px}
+         #messages-main #ms-compose{position:fixed;bottom:120px;z-index:1;right:30px;box-shadow:0 0 4px rgba(0,0,0,0.14),0 4px 8px rgba(0,0,0,0.28)}
+         #ms-menu-trigger{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;float:left;margin:1px 0 0 -7px}
+         @media (min-width: 768px){#ms-menu-trigger{display:none}}
+         #ms-menu-trigger .line-wrap .line{background-color:#717171}
+         .lv-message .lv-item{padding:20px}
+         .lv-message .lv-item.right{text-align:right}
+         .lv-message .lv-item.right .lv-avatar{margin-right:0;margin-left:15px}
+         .lv-message .lv-item:not(.right) .ms-item{background-color:#f5f5f5;color:#7c7c7c;box-shadow: 0 1.5px .5px rgba(0,0,0,.13);}
+         .lv-message .lv-item.right .ms-item{background:#ecf0f1;box-shadow: 0 1.5px .5px rgba(0,0,0,.13); color:#7c7c7c;}
+         .lv-avatar{width:35px;height:35px;border-radius:50%;color:#FFF;text-align:center;line-height:34px;font-size:15px;margin-right:15px;padding:0!important;text-transform:uppercase}
+         .lv-avatar > img{width:35px;height:35px;border-radius:50%;vertical-align:top}
+         .ms-item{padding:13px 19px 15px;border-radius:2px;display:inline-block}
+         @media (min-width: 768px){.ms-item{max-width:70%}}
+         .ms-date{display:block;color:#B3B3B3;margin-top:7px; margin-left:3px;}
+         .ms-date > i{font-size:14px;vertical-align:bottom;line-height:100%}
+         .ms-reply{ background-color:#f5f5f5;position:relative;margin:0!important}
+         .ms-reply textarea{width:94%; margin-left:-50px; resize:none;  border-style: none;border-color: Transparent;   overflow: auto;   font-size:15px; padding:10px;font-style:normal;height:45px;}
+         .ms-reply button{position:absolute;top:0;right:0;border:0;height:100%;width:60px;font-size:25px;background:#F5F5F5;color:#999}
+         .ms-reply button:hover{background:#f2f2f2; color:#7c7c7c}
+         textarea:focus {outline: none !important;border-color: #719ECE;}
+         #ms-scrollbar::-webkit-scrollbar-track
+         {
+         background-color:#CCCCCC;
+         }
+         #ms-scrollbar::-webkit-scrollbar
+         {
+         width: 7px;
+         background-color: #F5F5F5;
+         }
+         #ms-scrollbar::-webkit-scrollbar-thumb
+         {
+         background-color:#eeeeee;
+         -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+         }
+         .ms-new{box-shadow:0 2px 5px rgba(0,0,0,0.16),0 2px 10px rgba(0,0,0,0.12); background-color:#2196f3;}
+         .noti-detail{ margin-left:-70px;border:none !important; border-radius:0px; z-index:9999; box-shadow:0 2px 5px rgba(0,0,0,0.16),0 2px 3px rgba(0,0,0,0.12) !important;}
+         .right-click-menu{visibility:hidden;position:absolute;line-height:30px;padding:5px; padding-left:10px; padding-right:10px; background-color:rgba(255,255,255,1);box-shadow:0 2px 5px rgba(0,0,0,0.16),0 2px 3px rgba(0,0,0,0.12) !important; width:250px; position:fixed;}
+         .list-group{ background:none !important;}
+         .list-group-item{ border:none !important; background:none !important; padding-top:2px !important;padding-bottom:2px !important; padding-left:10px !important; padding-right:10px !important; font-weight:bold;}
+         .list-group-item:hover{ background-color:#6699FF !important; color:#FFFFFF; border-radius:2px;}
+         .context-menu-icon{ margin-top:9px; font-size:10px !important;}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div id="context_menu" class="right-click-menu">
+         <div class="list-group">
+            <a href="#" class="list-group-item">View <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
+            <a href="#" class="list-group-item">Sort By <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
+            <a href="#" class="list-group-item">Refresh</a>
+            <hr/>
+            <a href="#" class="list-group-item">Paste</a>
+            <a href="#" class="list-group-item">Paste shortcut</a>
+            <a href="#" class="list-group-item">Undo Delete</a>
+            <hr/>
+            <a href="#" class="list-group-item">Graphics Properties...</a>
+            <a href="#" class="list-group-item">Graphics Options <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
+            <hr/>
+            <a href="#" class="list-group-item">New <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
+         </div>
+      </div>
+      <!--- window --->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="btn btn-danger window-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-stop"></span></button>
+                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-minus"></span></button>
+                  <h4 class="modal-title"><img src="1.jpg" width="40px" class="window-icon"/><span class="window-title"></span></h4>
+               </div>
+               <div class="modal-body">
+                  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!---End Window--->
+      <!---Mesaages window --->
+      <div class="modal fade" id="message_window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow:hidden !important;">
+         <div class="modal-dialog ms-main-outer-part">
+            <div class="modal-content">
+               <div class="modal-header ms-header-tilte">
+                  <button type="button" class="btn btn-danger window-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-stop"></span></button>
+                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-minus"></span></button>
+                  <!---  <h4 class="modal-title"><img src="1.jpg" width="40px" class="window-icon"/><span class="ms-window-title">Messages</span></h4>--->
+               </div>
+               <div class="modal-body ms-main-show-inner-part">
+                  <div class="card m-b-0" id="messages-main" style="margin-top:-10px;">
+                     <div class="ms-menu"  style="overflow:scroll; overflow-x: hidden;" id="ms-scrollbar">
+                        <div class="ms-block">
+                           <div class="ms-user">
+                              <img src="./images/avatar.jpg" alt=""> 
+                              <h5 class="q-title" align="center">pgksunilkumar<br/><b>5</b> New Messages</h5>
+                           </div>
+                        </div>
+                        <div class="ms-block">
+                           <a class="btn btn-primary btn-block ms-new" href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp; New Message</a>
+                        </div>
+                        <hr/>
+                        <div class="listview lv-user m-t-20">
+                           <div class="lv-item media active">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/bhai.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title">pgksunilkumar</div>
+                                 <div class="lv-small"> their is a windows10 application</div>
+                              </div>
+                           </div>
+                           <div class="lv-item media">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/ajit.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title"><b>pgksunilkumar</b><span class="pull-right">10 new</div>
+                                 <div class="lv-small"><b>Hello bro whatsup , how are you</b></div>
+                              </div>
+                           </div>
+                           <div class="lv-item media">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/chota.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title"><b>pgksunilkumar</b><span class="pull-right">2 new</span></div>
+                                 <div class="lv-small"><b>aur bhai collage kse chale rhai hai </b></div>
+                              </div>
+                           </div>
+                           <div class="lv-item media">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/sumit.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title">pgksunilkumar</div>
+                                 <div class="lv-small">aur suna kya haal hai bhai, aur</div>
+                              </div>
+                           </div>
+                           <div class="lv-item media">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/sega.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title">pgksunilkumar</div>
+                                 <div class="lv-small">abey kaha chala gya ?? mar gya kya ??</div>
+                              </div>
+                           </div>
+                           <div class="lv-item media">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/gan.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title">pgksunilkumar</div>
+                                 <div class="lv-small">yeh ley eamil address pgksunilkumar@gmail.com</div>
+                              </div>
+                           </div>
+                           <div class="lv-item media">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/vasu.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title">pgksunilkumar</div>
+                                 <div class="lv-small">kal se classess start hai koi holiday nahi hai </div>
+                              </div>
+                           </div>
+                           <div class="lv-item media">
+                              <div class="lv-avatar pull-left">
+                                 <img src="./images/abc.jpg" alt="">
+                              </div>
+                              <div class="media-body">
+                                 <div class="lv-title">Deepu Singh</div>
+                                 <div class="lv-small">okk byee gud night dude kal baaat karte hai  </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="ms-body">
+                        <div class="listview lv-message">
+                           <div class="lv-header-alt clearfix">
+                              <div id="ms-menu-trigger">
+                                 <div class="line-wrap">
+                                    <div class="line top"></div>
+                                    <div class="line center"></div>
+                                    <div class="line bottom"></div>
+                                 </div>
+                              </div>
+                              <div class="lvh-label hidden-xs">
+                                 <div class="lv-avatar pull-left">
+                                    <img src="./images/bhai.jpg" alt="">
+                                 </div>
+                                 <span class="c-black">Ashwani Singh Yadav<span style=" margin-left:8px; position:absolute; margin-top:12px;width: 8px;height: 8px;line-height: 8px;    border-radius: 50%; background-color:#80d3ab;"></span></span>
+                              </div>
+                              <ul class="lv-actions actions list-unstyled list-inline">
+                                 <li>
+                                    <a data-toggle="dropdown" href="#" ><span class="glyphicon glyphicon-list"></span></a>
+                                    <ul class="dropdown-menu noti-detail" role="menu">
+                                       <li>
+                                          <a href="">Latest</a>
+                                       </li>
+                                       <li>
+                                          <a href="">Oldest</a>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a data-toggle="dropdown" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left"><span class="glyphicon glyphicon-trash"></span></a>
+                                    <ul class="dropdown-menu noti-detail" role="menu">
+                                       <li>
+                                          <a href="">Delete Messages</a>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="lv-body" id="ms-scrollbar" style="overflow:scroll; overflow-x: hidden; height:520px;">
+                              <div class="lv-item media">
+                                 <div class="lv-avatar pull-left">
+                                    <img src="./images/bhai.jpg" alt="">
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="ms-item">
+                                       <span class="glyphicon glyphicon-triangle-left" style="color:#000000;"></span>
+                                       We have an aim to educate and provide you the power to make website anything. Anytime. We don't teach, we educate.We provide Tutorials for many Programming languages on our website.
+                                    </div>
+                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 09:00</small>
+                                 </div>
+                              </div>
+                              <div class="lv-item media right">
+                                 <div class="lv-avatar pull-right">
+                                    <img src="./images/avatar.jpg" alt=""> 
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="ms-item">
+                                       We started this site with clear mission that we want to deliver complete details knowledge of Programming to our audience. We are sharing this knowledge in all areas that you can see in our site.
+                                    </div>
+                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 09:30</small>
+                                 </div>
+                              </div>
+                              <div class="lv-item media">
+                                 <div class="lv-avatar pull-left">
+                                    <img src="./images/bhai.jpg" alt="">
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="ms-item">
+                                       It's gives the power to synthesis anything anywhere you want to. Its the ultimate tool to solve any problem. And we help you excel in that by working with you.
+                                    </div>
+                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 20/02/2015 at 09:33</small>
+                                 </div>
+                              </div>
+                              <div class="lv-item media right">
+                                 <div class="lv-avatar pull-right">
+                                    <img src="./images/avatar.jpg" alt="">
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="ms-item">
+                                       The basic essence of life is to learn, explore and synthesis. We provide you with the tools to make your dreams come true.Our website is totally for free and available 24/7 and does not consume your data packs and works like a charm on the supersonic lovely internet.
+                                    </div>
+                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 10:10</small>
+                                 </div>
+                              </div>
+                              <div class="lv-item media">
+                                 <div class="lv-avatar pull-left">
+                                    <img src="./images/bhai.jpg" alt="">
+                                 </div>
+                                 <div class="media-body">
+                                    <div class="ms-item">
+                                       Acadnote a world class website is processing surveys for every student who wants to do something new and different in the field of academics. so it is a right place for every student to share their opinions about their present academics so this website can provide every single student requirements and it is possible for us to do if every student explains about their academics requirements. Last but not the least tell the needs and collect your study materials which we will provide to you. 
+                                    </div>
+                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 10:24</small>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                           <div class="lv-footer ms-reply">
+                              <textarea rows="10" placeholder="Write messages..."></textarea>
+                              <button class=""><span class="glyphicon glyphicon-send"></span></button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!---End Window--->
+      <h1 class="author">Windows 10 windows modal</h1>
+      <div class="started-bar">
+      <div class="row">
+         <div class="col-lg-3">
+            <div class="btn-group dropup">
+               <button type="button" class="btn btn-warning	dropdown-toggle start-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Start
+               </button>
+               <div class="dropdown-menu" id="startmenu">
+                  <div class="row main-bg">
+                     <div class="col-lg-4">
+                        <div class="row">
+                           <div class="col-lg-4 left-user-flmenu">
+                              <img src="1.jpg" class="user-pic"/>
+                              <b class="left-user-name">pgksunilkumar</b>
+                              <span class="glyphicon glyphicon-off left-user-flmenu-icon"></span>
+                           </div>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-book left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">Book Store</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-folder-open left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">Documents</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-folder-close left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">Downloads</b>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="row">
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-bullhorn left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">BullHorn</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-compressed left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">Compressed</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-phone-alt left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">Telphone</b>
+                              </div>
+                           </a>
+                        </div>
+                        <div class="row">
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-comment left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">Comments</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-4 left-list-flmenu">
+                                 <span class="glyphicon glyphicon-cog left-list-flmenu-icon"></span>
+                                 <b class="left-list-cat-name">PC Settings</b>
+                              </div>
+                           </a>
+                           <div class="col-lg-4 left-search-flmenu">
+                              <input type="text" class="search" placeholder="Search..." />
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-8" style="overflow-x:hidden; overflow-y: scroll; height:600px;" id="fl-scroll">
+                        <div class="row">
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 lg-flmenu flmenu3" align="center">
+                                 <span class="glyphicon glyphicon-headphones lg-span-icon"></span><br/>
+                                 <b class="lg-title">Music Player</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu2" align="center">
+                                 <span class="glyphicon glyphicon-volume-off span-icon"></span><br/>
+                                 <b>Volumne off</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#message_window">
+                              <div class="col-lg-1 flmenu flmenu1" align="center">
+                                 <span class="glyphicon glyphicon-envelope span-icon"></span><br/>
+                                 <b>Messages</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu4" align="center">
+                                 <span class="glyphicon glyphicon-plane span-icon"></span><br/>
+                                 <b>Aeroplane</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu5" align="center">
+                                 <span class="glyphicon glyphicon-hdd span-icon"></span><br/>
+                                 <b>Hard Disk Drive</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu6" align="center">
+                                 <span class="glyphicon glyphicon-camera span-icon"></span><br/>
+                                 <b>Camera</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu7" align="center">
+                                 <span class="glyphicon glyphicon-picture span-icon"></span><br/>
+                                 <b>Picture</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu8" align="center">
+                                 <span class="glyphicon glyphicon-bullhorn span-icon"></span><br/>
+                                 <b>Bullhorn</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu9" align="center">
+                                 <span class="glyphicon glyphicon-trash span-icon"></span><br/>
+                                 <b>Remove</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 md-flmenu flmenu10" align="center">
+                                 <span class="glyphicon glyphicon-qrcode md-span-icon"></span><br/>
+                                 <b class="md-title">Qcode Reader</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 md-flmenu flmenu11" align="center">
+                                 <span class="glyphicon glyphicon-print md-span-icon"></span><br/>
+                                 <b class="md-title">Printer</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 lg-flmenu flmenu12" align="center">
+                                 <span class="glyphicon glyphicon-film lg-span-icon"></span><br/>
+                                 <b class="lg-title">Movies</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu13" align="center">
+                                 <span class="glyphicon glyphicon-download-alt span-icon"></span><br/>
+                                 <b>Downloads</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu14" align="center">
+                                 <span class="glyphicon glyphicon-phone span-icon"></span><br/>
+                                 <b>Mobile</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu15" align="center">
+                                 <span class="glyphicon glyphicon-refresh span-icon"></span><br/>
+                                 <b>Refresh</b>
+                              </div>
+                           </a>
+                           <a data-toggle="modal" href="#myModal">
+                              <div class="col-lg-1 flmenu flmenu16" align="center">
+                                 <span class="glyphicon glyphicon-inbox span-icon"></span><br/>
+                                 <b>Email</b>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!---Left Side Optionns--->
+         <div class="col-lg-8">
+            <div class="row">
+               <div class="col-lg-4">
+               </div>
+               <div class="col-lg-4">
+               </div>
+               <div class="col-lg-1">
+               </div>
+               <div class="col-lg-3">
+                  <!--- Show icons--->
+                  <div class="dropup">
+                     <span class="glyphicon glyphicon-play dropdown-toggle show-icons-all" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+                     <div class="dropdown-menu noti-main">
+                        <div class="noti-show">
+                           <div class="row">
+                              <div class="col-lg-4 noti-show-icon">
+                                 <span class="glyphicon glyphicon-trash noti-icon"></span>
+                              </div>
+                              <div class="col-lg-4 noti-show-icon">
+                                 <span class="glyphicon glyphicon-compressed noti-icon"></span>
+                              </div>
+                              <div class="col-lg-4 noti-show-icon">
+                                 <span class="glyphicon glyphicon-download-alt noti-icon"></span>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-4 noti-show-icon">
+                                 <span class="glyphicon glyphicon-headphones noti-icon"></span>
+                              </div>
+                              <div class="col-lg-4 noti-show-icon">
+                                 <span class="glyphicon glyphicon-print noti-icon"></span>
+                              </div>
+                              <div class="col-lg-4 noti-show-icon">
+                                 <span class="glyphicon glyphicon-camera noti-icon"></span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--- End icons--->
+                  <!--- network icons--->
+                  <div class="dropup">
+                     <span class="glyphicon glyphicon-signal dropdown-toggle network-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+                     <div class="dropdown-menu network-outer-part">
+                        <div class="network-main">
+                           <div class="row">
+                              <div class="col-lg-4 network-avail">
+                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
+                                 <b class="network-avail-name">Kirans Mens Hostels</b>
+                              </div>
+                              <div class="col-lg-4 network-avail">
+                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
+                                 <b class="network-avail-name">Thub</b>
+                              </div>
+                              <div class="col-lg-4 network-avail">
+                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
+                                 <b class="network-avail-name">Thub Catalyst</b>
+                              </div>
+                              <div class="col-lg-4 network-avail">
+                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
+                                 <b class="network-avail-name">Thub Guest User</b>
+                              </div>
+                           </div>
+                           <h4 style="color:#f5f5f5">Network Settings</h4>
+                           <div class="row">
+                              <div class="col-lg-12" >
+                                 <button type="button" class="btn btn-info net-set-btn"><span class="glyphicon glyphicon-signal net-set-icon"></span><br/>Available</button>&nbsp;&nbsp;<button type="button" class="btn net-set-btn"><span class="glyphicon glyphicon-plane net-set-icon-aero"></span><br/>Airplane Mode</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--- networks icons--->
+                  <!---Volume--->
+                  <div class="dropup">
+                     <span class="glyphicon glyphicon-volume-down dropdown-toggle volume-icon" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+                     <div class="dropdown-menu volume-none" aria-labelledby="dropdownMenu2">
+                        <span id="valBox" class="info-volume"></span>
+                        <div class="volume-bg">
+                           <div class="volume">
+                              <input type="range" min="0" max="100" class="volume-settings" onChange="showVal(this.value)">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!---End Volume--->
+                  <span class="time" id="fl-time"></span> 
+               </div>
+            </div>
+         </div>
+      </div>
+</div>
+<script type="text/javascript">
+  window.onload = function(){getTime();}  
+         function getTime(){  
+         var display = new Date();  
+         var h = display.getHours();  
+         var m = display.getMinutes();  
+         m = checkTime(m);  
+         document.getElementById('fl-time').innerHTML=h+":"+m;  
+         setTimeout(function(){getTime()},1000);  
+         }  
+         function checkTime(i){  
+         if (i<10){  
+           i="0" + i;  
+          }  
+         return i;  
+         }  
+         
+         
+          var mozilla=document.getElementById && !document.all
+         var ie=document.all
+         var contextisvisible=0
+         
+         function iebody(){
+         return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+         }
+         
+         function displaymenu(e){
+         el=document.getElementById("context_menu")
+         contextisvisible=1
+         if (mozilla){
+         el.style.left=pageXOffset+e.clientX+"px"
+         el.style.top=pageYOffset+e.clientY+"px"
+         el.style.visibility="visible"
+         e.preventDefault()
+         return false
+         }
+         else if (ie){
+         el.style.left=iebody().scrollLeft+event.clientX
+         el.style.top=iebody().scrollTop+event.clientY
+         el.style.visibility="visible"
+         return false
+         }
+         }
+         
+         function hidemenu(){
+         if (typeof el!="undefined" && contextisvisible){
+         el.style.visibility="hidden"
+         contextisvisible=0
+         }
+         }
+         
+         if (mozilla){
+         document.addEventListener("contextmenu", displaymenu, true)
+         document.addEventListener("click", hidemenu, true)
+         }
+         else if (ie){
+         document.attachEvent("oncontextmenu", displaymenu)
+         document.attachEvent("onclick", hidemenu)
+         }
+         
+          function showVal(newVal){
+         document.getElementById("valBox").innerHTML=newVal;
+         }
+</script>
+</body>
+</html>
