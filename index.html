@@ -1,1093 +1,1110 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from themesground.com/porto-demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Nov 2016 10:11:33 GMT -->
 <head>
-    <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>pgksunilkumar</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-         
-         body{ background-color:#fff;}
-         .main-bg{ background-color:#666; padding-right:3px; padding-top:3px; padding-bottom:3px;}
-         .open > .dropdown-menu {
-         -webkit-transform: scale(1, 1);
-         transform: scale(1, 1);  
-         opacity:1;
-         }
-         .dropdown-menu {
-         opacity:.3;
-         -webkit-transform-origin: bottom;
-         transform-origin: bottom;
-         -webkit-animation-fill-mode: forwards;  
-         animation-fill-mode: forwards; 
-         -webkit-transform: scale(1, 0);
-         display: block; 
-         transition: all 0.2s linear;
-         -webkit-transition: all 0.2s linear;
-         box-shadow:none !important;
-         }
-         .flmenu{
-         width: 160px!important;
-         height: 100px!important;
-         margin:5px;
-         display:block !important;
-         padding-top:23px;
-         color:#f5f5f5;
-         border:2px solid transparent;
-         }
-         .span-icon{ font-size:20px;}
-         .flmenu:hover{ background-color:#f5f5f5 !important; cursor:pointer; color:#CCCCCC;border-color:rgba(161,161,161,0.5);}
-         .flmenu1{
-         background-color: #000000;
-         }
-         .flmenu2{
-         background-color: #00B159;
-         }
-         .flmenu3{
-         background-color: #00AEDB;
-         }
-         .flmenu4{
-         background-color: #F37735;
-         }
-         .flmenu5{
-         background-color: #EC098C;
-         }
-         .flmenu6{
-         background-color: #314E6C;
-         }
-         .flmenu7{
-         background-color: #44A5AC;
-         }
-         .flmenu8{
-         background-color: #297E83;
-         }
-         .flmenu9{
-         background-color:#CC3366;
-         }
-         .flmenu10{
-         background-color: #C9312C;
-         }
-         .flmenu11{
-         background-color:#6699CC;
-         }
-         .flmenu12{
-         background-color: #7C4199;
-         }
-         .flmenu13{
-         background-color: #FFC425;
-         }
-         .flmenu14{
-         background-color: #034A8C;
-         }
-         .flmenu15{
-         background-color: #E59B18;
-         }
-         .flmenu16{
-         background-color: #006054;
-         }
-         .flmenu17{
-         background-color: #44A5AC;
-         }
-         .flmenu18{
-         background-color: #336797;
-         }
-         .flmenu19{
-         background-color: #3B3E45;
-         }
-         .start-btn{
-         padding: 8px 30px;
-         border: 0;
-         border-radius:1px !important;
-         text-transform: uppercase;
-         text-decoration: none;
-         transition: 0.2s ease;
-         box-shadow:0 1px 6px 0 rgba(0,0,0,.12),0 1px 6px 0 rgba(0,0,0,.12);
-         outline: none!important;}
-         .start-btn:hover{ box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15)}
-         .start-btn:active{}
-         #startmenu{width:1050px !important;background:none; !important;position: absolute; border:none;}
-         @media screen and (max-width: 767px) {
-         #startmenu{ width:200px !important;}
-         }
-         .started-bar {
-         position:fixed;
-         width: 100%;
-         bottom:0;
-         background-color: #7c7c7c;
-         padding-top:2px;
-         padding-bottom:2px;
-         padding-left:18px;
-         }
-         .left-list-flmenu{
-         width:300px !important;
-         height: 50px!important;
-         margin:5px;
-         display:block !important;
-         color:#f5f5f5;
-         }
-         .left-list-flmenu:hover{ background-color:#f5f5f5; color:#7c7c7c; cursor:pointer;}
-         .left-list-flmenu-icon{ font-size:30px; margin-top:7px; float:left;}
-         .left-list-cat-name{ font-size:15px; font-weight:400 !important; margin-left:40px; margin-top:7px; float:left;}
-         .left-user-flmenu{
-         width:300px !important;
-         height: 50px!important;
-         margin:5px;
-         display:block !important;
-         color:#f5f5f5;
-         border-bottom:1px solid #999;
-         padding-bottom:55px;
-         }
-         .left-user-flmenu:hover{ background-color:#f5f5f5; color:#7c7c7c; cursor:pointer;}
-         .left-user-flmenu-icon{ font-size:25px; margin-top:2px; float:right; padding:10px;}
-         .left-user-flmenu-icon:hover{ background-color:#ccc; color:#f5f5f5; cursor:pointer; border-radius:2px;}
-         .left-user-name{ font-size:25px; font-weight:400 !important; margin-left:10px; margin-top:7px; float:left;}
-         .user-pic{float:left; width:40px; margin-top:5px; border-radius:2px;}
-         .left-search-flmenu{
-         width:300px !important;
-         height: 50px!important;
-         display:block !important;
-         color:#7c7c7c;
-         }
-         .search{ border:none; width:300px; height:40px; text-indent:10px; font-size:17px; border-radius:1px;}
-         .search:focus
-         {
-         outline:0px !important;
-         -webkit-appearance:none;
-         }
-         .left-user-flmenu{
-         width:300px !important;
-         height: 50px!important;
-         margin:5px;
-         display:block !important;
-         color:#f5f5f5;
-         }
-         .lg-flmenu{
-         width: 330px!important;
-         height: 210px!important;
-         margin:5px;
-         display:block !important;
-         padding-top:60px;
-         color:#f5f5f5;
-         border:2px solid transparent;
-         }
-         .lg-flmenu:hover{
-         background-color:#f5f5f5; cursor:pointer; color:#CCCCCC;border-color:rgba(161,161,161,0.5);
-         }
-         .lg-span-icon{ font-size:50px;}
-         .lg-title{ font-size:34px;}
-         .md-flmenu{
-         width: 160px!important;
-         height: 210px!important;
-         margin:5px;
-         display:block !important;
-         padding-top:60px;
-         color:#f5f5f5;
-         border:2px solid transparent;
-         }
-         .md-flmenu:hover{
-         background-color:#f5f5f5; cursor:pointer; color:#CCCCCC;border-color:rgba(161,161,161,0.5);
-         }
-         .md-span-icon{ font-size:60px;}
-         .md-title{ font-size:25px;}
-         #fl-scroll::-webkit-scrollbar-track
-         {
-         -webkit-box-shadow:none;
-         background-color:none;
-         }
-         #fl-scroll::-webkit-scrollbar
-         {
-         width: 7px;
-         background-color:none;
-         }
-         #fl-scroll::-webkit-scrollbar-thumb
-         {
-         background-color: #333;
-         }
-         .author{ font-size:60px; margin-left:280px; margin-top:250px;  color:#999; font-weight:bold;}
-         .time{ font-size:25px; color:#f5f5f5; float:right;}
-         .volume {
-         transform: rotate(-90deg);
-         }
-         .volume:before {
-         content: " ";
-         }
-         .volume input[type=range] {
-         outline: none;
-         -webkit-appearance: none;
-         padding: 2px;
-         background-color:#fff;
-         border:10px solid rgba(0,0,0,0.4);
-         position: relative;
-         margin: 0;
-         cursor: pointer;
-         }
-         .volume input[type=range]::-webkit-slider-thumb {
-         -webkit-appearance: none;
-         background:#66CCCC;
-         height: 15px;
-         width: 15px;
-         border-radius: 10%;
-         }
-         .volume input[type=range]::-moz-range-track {
-         border: none;
-         background:none;
-         }
-         .volume input[type=range]::-moz-range-thumb {
-         background:#66CCCC;
-         height: 20px;
-         width: 20px;
-         border-radius: 10%;
-         }
-         .volume input[type=range]::-ms-fill-lower, .volume input[type=range]::-ms-fill-upper {
-         background: transparent;
-         }
-         .volume input[type=range]::-ms-track {
-         height: 18px;
-         border: none;
-         background:none;
-         margin: 0;
-         }
-         .volume input[type=range]::-ms-thumb {
-         background:#66CCCC;
-         height: 20px;
-         width: 20px;
-         border-radius: 10%;
-         }
-         .volume-settings{ margin-top:-100px !important; position:fixed;}
-         .volume-none{ background:none !important; border:none !important; margin-left:50px;}
-         .volume-bg{ }
-         .info-volume{ font-size:40px; float:right; position:fixed; margin-top:-210px; margin-left:58px;}
-         .volume-icon{font-size:35px; float:left; margin-left:15px; color:#f5f5f5; cursor:pointer}
-         .volume-icon:hover{ color:#CCCCCC;}
-         .show-icons-all{font-size:15px; float:left; margin-top:13px; color:#f5f5f5; cursor:pointer;   transform: rotate(-90deg); margin-left:35px;}
-         .network-icon{font-size:23px; float:left; margin-left:10px; color:#f5f5f5; cursor:pointer; margin-top:5px;}
-         .noti-show{ padding:10px; padding-left:20px; padding-right:20px; background-color:rgba(0,0,0,0.1); border:10px solid rgba(0,0,0,0.2);}
-         .noti-icon{}
-         .noti-show-icon{ padding:10px; font-size:20px; cursor:pointer;}
-         .noti-show-icon:hover{ background-color:#f5f5f5; color:#999999; border-radius:3px;}
-         .noti-main{background:none !important; border:none !important;}
-         .network-outer-part{background:none !important; border:none !important;}
-         .network-main{padding:5px; padding-left:20px; padding-right:20px; border:2px solid rgba(0,0,0,0.1); background:#888;}
-         .network-avail{
-         width:300px !important;
-         height: 40px!important;
-         margin:5px;
-         display:block !important;
-         color:#f5f5f5;
-         }
-         .network-avail:hover{ background-color:#f5f5f5; color:#7c7c7c; cursor:pointer;}
-         .network-avail:active{ border:5px solid transparent;}
-         .network-avail-icon{ font-size:20px; margin-top:10px; float:left;}
-         .network-avail-name{ font-size:20px; font-weight:400 !important; margin-left:10px; margin-top:7px; float:left;}
-         .net-set-icon{ float:left;}
-         .net-set-btn{}
-         .net-set-icon-aero{  transform: rotate(90deg); float:left; font-size:15px;}
-         .modal-dialog{ width:95% !important; height:90% !important; margin-top:-8px;padding:0px !important; }
-         .modal-content {
-         position: relative;
-         background-color:rgba(0,191,255,0.7) !important;
-         border:0px !important;
-         border:0px !important;
-         border-radius: 0;
-         box-shadow:none !important;
-         }
-         /*.modal{ overflow:hidden !important; border-left:10px solid #6699FF;border-right:10px solid #6699FF;border-bottom:10px solid #6699FF}*/
-         /*.modal-header{ background-color:#6699FF;}*/
-         .window-icon{ float:left; border-radius:2px;}
-         .window-title{ margin-left:200px; font-size:25px !important; color:#444; font-weight:bold;}
-         .window-close-btn{ padding:2px !important; margin-top:-10px !important; float:right; width:50px; font-size:15px;}
-         .window-close-btn:hover{ padding:5px; background-color:#FF3300;}
-         .window-btn-all{ background:none; padding:2px !important; margin-top:-10px !important; float:right; width:35px; font-size:15px;}
-         .window-btn-all:hover{ background-color:#6666FF; color:#fff;}
-         /*.modal-body{  height:100% !important; width:100% !important}*/
-         .ms-header-tilte{ height:1px; border:none !important}
-         .ms-footer{}
-         .ms-main-outer-part{}
-         .ms-window{}
-         .ms-window-title{margin-left:500px; font-size:25px !important; color:#444; font-weight:bold;}
-         .actions {
-         list-style: none;
-         padding: 0;
-         z-index: 2;
-         margin: 0;
-         }
-         .actions > li {
-         display: inline-block;
-         vertical-align: baseline;
-         }
-         .actions > li > a,
-         .actions > a {
-         width: 30px;
-         height: 30px;
-         line-height: 35px;
-         display: inline-block;
-         text-align: center;
-         position: relative;
-         }
-         .actions > li > a > i,
-         .actions > a > i {
-         -webkit-transition: color;
-         -o-transition: color;
-         transition: color;
-         -webkit-transition-duration: 1300ms;
-         transition-duration: 1300ms;
-         color: #adadad;
-         font-size: 20px;
-         }
-         .actions > li > a:hover > i,
-         .actions > a:hover > i {
-         color: #000;
-         }
-         .actions > li > a:before,
-         .actions > a:before {
-         left: 0;
-         top: 0;
-         content: "";
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         -webkit-transform: scale3d(0, 0, 0);
-         -moz-transform: scale3d(0, 0, 0);
-         -ms-transform: scale3d(0, 0, 0);
-         -o-transform: scale3d(0, 0, 0);
-         transform: scale3d(0, 0, 0);
-         -webkit-transition: all;
-         -o-transition: all;
-         transition: all;
-         -webkit-transition-duration: 250ms;
-         transition-duration: 250ms;
-         -webkit-backface-visibility: hidden;
-         -moz-backface-visibility: hidden;
-         backface-visibility: hidden;
-         background-color: rgba(0, 0, 0, 0.1);
-         z-index: 0;
-         border-radius: 50%;
-         opacity: 0;
-         filter: alpha(opacity=0);
-         }
-         .actions > li > a:hover:before,
-         .actions > a:hover:before {
-         -webkit-transform: scale3d(1, 1, 1);
-         -moz-transform: scale3d(1, 1, 1);
-         -ms-transform: scale3d(1, 1, 1);
-         -o-transform: scale3d(1, 1, 1);
-         transform: scale3d(1, 1, 1);
-         opacity: 1;
-         filter: alpha(opacity=100);
-         }
-         .actions > li.open > a > i,
-         .actions.open > a > i {
-         color: #000;
-         }
-         .actions > li.open > a:before,
-         .actions.open > a:before {
-         -webkit-transform: scale(1);
-         -ms-transform: scale(1);
-         -o-transform: scale(1);
-         transform: scale(1);
-         opacity: 1;
-         filter: alpha(opacity=100);
-         }
-         .actions.actions-alt > li > a > i {
-         color: #fff;
-         }
-         .actions.actions-alt > li > a > i:hover {
-         color: #fff;
-         }
-         .actions.actions-alt > li.open > a > i {
-         color: #fff;
-         }
-         .actions.open {
-         z-index: 3;
-         }
-         .line-wrap {
-         width: 18px;
-         height: 12px;
-         -webkit-transition: all;
-         -o-transition: all;
-         transition: all;
-         -webkit-transition-duration: 300ms;
-         transition-duration: 300ms;
-         margin: 10px 20px;
-         }
-         .line-wrap .line {
-         width: 18px;
-         height: 2px;
-         -webkit-transition: all;
-         -o-transition: all;
-         transition: all;
-         -webkit-transition-duration: 300ms;
-         transition-duration: 300ms;
-         }
-         .line-wrap .line.center {
-         margin: 3px 0;
-         }
-         .open .line-wrap {
-         -webkit-transform: rotate(180deg);
-         -ms-transform: rotate(180deg);
-         -o-transform: rotate(180deg);
-         transform: rotate(180deg);
-         }
-         .open .line-wrap .line.top {
-         width: 12px;
-         transform: translateX(8px) translateY(1px) rotate(45deg);
-         -webkit-transform: translateX(8px) translateY(1px) rotate(45deg);
-         }
-         .open .line-wrap .line.bottom {
-         width: 12px;
-         transform: translateX(8px) translateY(-1px) rotate(-45deg);
-         -webkit-transform: translateX(8px) translateY(-1px) rotate(-45deg);
-         }
-         .listview{position:relative}.listview:not(.lv-lg):not(.lv-message) .lv-item{padding:12px 20px}
-         @media (min-width: 480px){.listview.lv-lg .lv-item{padding:17px 35px 17px 25px}}
-         @media (max-width: 767px){.listview.lv-lg .lv-item{padding:17px 35px 17px 20px}}
-         .listview.lv-lg .lv-item:hover{background-color:#FFFFDB}
-         .listview .lv-item{position:relative;display:block;-webkit-transition:background-color;-o-transition:background-color;transition:background-color;-webkit-transition-duration:300ms;transition-duration:300ms}
-         .listview .lv-item .lv-small{font-size:12px;color:#A9A9A9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;width:100%}
-         .listview .lv-item .checkbox,.listview .lv-item.media{margin:0}
-         .lvh-search-close:hover{background:#333}
-         .lv-header-alt{position:relative;background:#f8f8f8;padding:15px}
-         .lv-header-alt .lv-actions{z-index:3;float:right;margin-top:3px;position:relative}
-         .lv-header-alt .lv-actions > li > a{margin:0 3px}
-         .lvh-label{color:#818181;display:inline-block;margin:0;font-size:14px;font-weight:400;padding:0 6px;line-height:33px;vertical-align:middle}
-         .lv-footer{display:block;text-align:center;padding:7px 10px 8px;border-top:1px solid #F0F0F0;line-height:100%;font-size:11px;margin-top:20px;color:#828282}.card{position:relative;background:#fff;margin-bottom:30px}
-         .#messages-main:before,#messages-main:after{content:" ";display:table}
-         #messages-main:after{clear:both}#messages-main .ms-block{padding:23px 20px 0}
-         #messages-main .ms-menu{position:absolute;left:0;top:0;background:#F8F8F8;border-right:1px solid #EEE;padding-bottom:50px;height:100%;width:240px;-webkit-transition:all;-o-transition:all;transition:all;-webkit-transition-duration:250ms;transition-duration:250ms}
-         @media (max-width: 767px){#messages-main .ms-menu{height:calc(100% - 58px);-webkit-transform:translate3d(-240px,58px,0);transform:translate3d(-240px,58px,0);opacity:0;filter:alpha(opacity=0);z-index:1}
-         #messages-main .ms-menu.toggled{-webkit-transform:translate3d(0,58px,0);transform:translate3d(0,58px,0);opacity:1;filter:alpha(opacity=100)}}#messages-main .ms-menu .lv-item.active{background:#fff}
-         #messages-main .ms-menu .lv-item:not(.active):hover{background:#F2F2F2;cursor:pointer}
-         @media (min-width: 768px){#messages-main .ms-body{padding-left:240px}}
-         @media (max-width: 767px){#messages-main .ms-body{overflow:hidden}}
-         #messages-main .ms-user:before,#messages-main .ms-user:after{content:" ";display:table}
-         #messages-main .ms-user:after{clear:both}
-         #messages-main .ms-user:before,#messages-main .ms-user:after{content:" ";display:table}
-         #messages-main .ms-user:after{clear:both}
-         #messages-main .ms-user > img{border-radius:50%;width:40px;float:left}
-         #messages-main .ms-user > div{overflow:hidden;padding:7px 5px 7px 15px;font-size:11px}
-         #messages-main #ms-compose{position:fixed;bottom:120px;z-index:1;right:30px;box-shadow:0 0 4px rgba(0,0,0,0.14),0 4px 8px rgba(0,0,0,0.28)}
-         #ms-menu-trigger{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;float:left;margin:1px 0 0 -7px}
-         @media (min-width: 768px){#ms-menu-trigger{display:none}}
-         #ms-menu-trigger .line-wrap .line{background-color:#717171}
-         .lv-message .lv-item{padding:20px}
-         .lv-message .lv-item.right{text-align:right}
-         .lv-message .lv-item.right .lv-avatar{margin-right:0;margin-left:15px}
-         .lv-message .lv-item:not(.right) .ms-item{background-color:#f5f5f5;color:#7c7c7c;box-shadow: 0 1.5px .5px rgba(0,0,0,.13);}
-         .lv-message .lv-item.right .ms-item{background:#ecf0f1;box-shadow: 0 1.5px .5px rgba(0,0,0,.13); color:#7c7c7c;}
-         .lv-avatar{width:35px;height:35px;border-radius:50%;color:#FFF;text-align:center;line-height:34px;font-size:15px;margin-right:15px;padding:0!important;text-transform:uppercase}
-         .lv-avatar > img{width:35px;height:35px;border-radius:50%;vertical-align:top}
-         .ms-item{padding:13px 19px 15px;border-radius:2px;display:inline-block}
-         @media (min-width: 768px){.ms-item{max-width:70%}}
-         .ms-date{display:block;color:#B3B3B3;margin-top:7px; margin-left:3px;}
-         .ms-date > i{font-size:14px;vertical-align:bottom;line-height:100%}
-         .ms-reply{ background-color:#f5f5f5;position:relative;margin:0!important}
-         .ms-reply textarea{width:94%; margin-left:-50px; resize:none;  border-style: none;border-color: Transparent;   overflow: auto;   font-size:15px; padding:10px;font-style:normal;height:45px;}
-         .ms-reply button{position:absolute;top:0;right:0;border:0;height:100%;width:60px;font-size:25px;background:#F5F5F5;color:#999}
-         .ms-reply button:hover{background:#f2f2f2; color:#7c7c7c}
-         textarea:focus {outline: none !important;border-color: #719ECE;}
-         #ms-scrollbar::-webkit-scrollbar-track
-         {
-         background-color:#CCCCCC;
-         }
-         #ms-scrollbar::-webkit-scrollbar
-         {
-         width: 7px;
-         background-color: #F5F5F5;
-         }
-         #ms-scrollbar::-webkit-scrollbar-thumb
-         {
-         background-color:#eeeeee;
-         -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
-         }
-         .ms-new{box-shadow:0 2px 5px rgba(0,0,0,0.16),0 2px 10px rgba(0,0,0,0.12); background-color:#2196f3;}
-         .noti-detail{ margin-left:-70px;border:none !important; border-radius:0px; z-index:9999; box-shadow:0 2px 5px rgba(0,0,0,0.16),0 2px 3px rgba(0,0,0,0.12) !important;}
-         .right-click-menu{visibility:hidden;position:absolute;line-height:30px;padding:5px; padding-left:10px; padding-right:10px; background-color:rgba(255,255,255,1);box-shadow:0 2px 5px rgba(0,0,0,0.16),0 2px 3px rgba(0,0,0,0.12) !important; width:250px; position:fixed;}
-         .list-group{ background:none !important;}
-         .list-group-item{ border:none !important; background:none !important; padding-top:2px !important;padding-bottom:2px !important; padding-left:10px !important; padding-right:10px !important; font-weight:bold;}
-         .list-group-item:hover{ background-color:#6699FF !important; color:#FFFFFF; border-radius:2px;}
-         .context-menu-icon{ margin-top:9px; font-size:10px !important;}
-    </style>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<title>PGKSUNILKUMAR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="porto by ThemesGround - An easy to use Personal Portfolio - Retina Ready and Responsive HTML5 theme">
+<meta name="author" content="ThemesGround">
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,800,900" rel="stylesheet">
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="assets/css/extension.css" rel="stylesheet">
+<link href="assets/css/font-awesome.css" rel="stylesheet">
+<link href="assets/css/simple-line-icons.css" rel="stylesheet">
+<link href="stylesheets/responsive-nav.css" rel="stylesheet">
+<link href="stylesheets/responsive-nav.css" rel="stylesheet">
+<link href="stylesheets/quotes.css" rel="stylesheet">
+<link href="stylesheets/services.css" rel="stylesheet">
+<link href="stylesheets/animate.css" rel="stylesheet">
+<link href="stylesheets/effects.css" rel="stylesheet">
+<link href="stylesheets/jquery.easy-pie-chart.css" rel="stylesheet">
+<link href="stylesheets/sidemenu.css" rel="stylesheet">
+<link href="stylesheets/slidingmenu.css" rel="stylesheet">
+<link href="stylesheets/metro-panel.css" rel="stylesheet">
+<link href="stylesheets/style.css" rel="stylesheet">
+
+
+
+<script src="javascripts/modernizr.custom.menu.js"></script>
+<script src="javascripts/modernizr.custom.quotes.js"></script>
+<script src="javascripts/modernizr.custom.services.js"></script>
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <link href="stylesheets/ie8.css" rel="stylesheet">
+<![endif]-->
 </head>
+
 <body>
-<div class="container">
-  <div id="context_menu" class="right-click-menu">
-         <div class="list-group">
-            <a href="#" class="list-group-item">View <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
-            <a href="#" class="list-group-item">Sort By <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
-            <a href="#" class="list-group-item">Refresh</a>
-            <hr/>
-            <a href="#" class="list-group-item">Paste</a>
-            <a href="#" class="list-group-item">Paste shortcut</a>
-            <a href="#" class="list-group-item">Undo Delete</a>
-            <hr/>
-            <a href="#" class="list-group-item">Graphics Properties...</a>
-            <a href="#" class="list-group-item">Graphics Options <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
-            <hr/>
-            <a href="#" class="list-group-item">New <span  class="pull-right glyphicon glyphicon-play context-menu-icon"></span></a>
-         </div>
+
+
+
+
+
+
+
+<!-- Mobile Only Navigation - 2 types each for small device screens -->
+<!-- Sliding Navigation : starts -->
+<nav class="menu visible-xs" id="sm">
+  <div class="sm-wrap">
+    <h1 class="sm-logo">Sunil</h1>
+    <i class="icon-remove menu-close"></i>
+    <a class="scroll-link"  data-soffset="0" href="#home">Home</a>
+    <a class="scroll-link"  data-soffset="0" href="#about">About</a>
+    <a class="scroll-link"  data-soffset="0" href="#portfolio">Portfolio</a>
+    <a class="scroll-link"  data-soffset="0" href="#services">Services</a>
+    <a class="scroll-link"  data-soffset="0" href="#contact">Contact</a>
+    <a class="scroll-link"  data-soffset="0" href="#profile">Profile Page</a>
+    <a class="scroll-link"  data-soffset="0" href="#testimonials">Project Page</a>
+  </div>
+  <!-- Navigation Trigger Button -->
+  <div id="sm-trigger"></div>
+</nav>
+<!-- Sliding Navigation : ends -->
+
+
+
+
+
+
+<section id="mastwrap" class="sliding">
+ 
+
+<div id="sidebar-nav" class="sq-side-menu hidden-xs">
+    <ul>
+      <!-- Starting : Nav Block -->
+      <li class="porto-bg-four">
+        <a class="scroll-link" id="home-link" href="#home" data-soffset="0">
+          <div class="first">
+            <div class="arrow-right"></div>
+            <div class="content"><img alt="" title="" src="images/icons/home.png"/></div>
+          </div>
+          <div class="second">
+            <div class="arrow-left"></div>
+            <div class="content">Home</div>
+          </div>
+        </a>
+      </li>
+      <!-- Ending : Nav Block -->
+      
+      <!-- Starting : Nav Block -->
+      <li class="porto-bg-one">
+         <a class="scroll-link" id="about-link" href="#about" data-soffset="0">
+          <div class="first">
+            <div class="arrow-right"></div>
+            <div class="content"><img alt="" title="" src="images/icons/01.png"/></div>
+          </div>
+          <div class="second">
+            <div class="arrow-left"></div>
+            <div class="content">About</div>
+          </div>
+        </a>
+      </li>
+     <!-- Ending : Nav Block -->
+      
+      <!-- Starting : Nav Block -->
+      <li class="porto-bg-two">
+        <a class="scroll-link" id="portfolio-link" href="#portfolio" data-soffset="0">
+          <div class="first">
+            <div class="arrow-right"></div>
+            <div class="content"><img alt="" title="" src="images/icons/06.png"/></div>
+          </div>
+          <div class="second">
+            <div class="arrow-left"></div>
+            <div class="content">Portfolio</div>
+          </div>
+        </a>
+      </li>
+      <!-- Ending : Nav Block -->
+      
+      <!-- Starting : Nav Block -->
+      <li class="porto-bg-three">
+        <a class="scroll-link" id="services-link" href="#services" data-soffset="0">
+          <div class="first">
+            <div class="arrow-right"></div>
+            <div class="content"><img alt="" title="" src="images/icons/03.png"/></div>
+          </div>
+          <div class="second">
+            <div class="arrow-left"></div>
+            <div class="content">Services</div>
+          </div>
+        </a>
+      </li>
+      <!-- Ending : Nav Block -->
+      
+      <!-- Starting : Nav Block -->
+      <li class="porto-bg-eight">
+       <a class="scroll-link" id="contact-link" href="#contact" data-soffset="0">
+          <div class="first">
+            <div class="arrow-right"></div>
+            <div class="content"><img alt="" title="" src="images/icons/05.png"/></div>
+          </div>
+          <div class="second">
+            <div class="arrow-left"></div>
+            <div class="content">Contact</div>
+          </div>
+        </a>
+      </li>
+      <!-- Ending : Nav Block -->
+      
+      <!-- Starting : Nav Block -->
+      <li class="porto-bg-six">
+        <a class="scroll-link" id="testimonials-link" href="#testimonials" data-soffset="0">
+          <div class="first">
+            <div class="arrow-right"></div>
+            <div class="content"><img alt="" title="" src="images/icons/02.png"/></div>
+          </div>
+          <div class="second">
+            <div class="arrow-left"></div>
+            <div class="content">Testimonials</div>
+          </div>
+        </a>
+      </li>
+      <!-- Ending : Nav Block -->
+      
+      <!-- Starting : Nav Block -->
+      <li class="porto-bg-five">
+       <a class="scroll-link" id="profile-link" href="#profile" data-soffset="0">
+          <div class="first">
+            <div class="arrow-right"></div>
+            <div class="content"><img alt="" title="" src="images/icons/04.png"/></div>
+          </div>
+          <div class="second">
+            <div class="arrow-left"></div>
+            <div class="content">Profile</div>
+          </div>
+        </a>
+      </li>
+      <!-- Ending : Nav Block -->
+     
+    </ul>
+    <!-- end sq-side-menu ul -->
+  </div>
+  <!-- end sq-side-menu -->
+
+<!-- 
+<div id="logo" class="hidden-xs"><img alt="" title="" src="images/logo.png"/></div> -->
+
+
+<!-- HEADER : STARTS -->
+
+
+<!-- HOME : STARTS -->
+<section id="home">
+<section id="metro-panel" class="fx fx-bounceIn">
+
+      <!-- stripe:starts  -->
+      <div class="stripe clearfix">
+
+        <!-- Tile : Starts -->
+        <div class="tile tile-01 transparent">
+        
+        </div>
+       <!-- Tile : Ends -->
+
+
+        <!-- Tile : Starts -->
+        <div class="tile tile-01 thumb">
+        <div class="tile-nav flipX">
+            <img alt="" title="" class="img1" src="images/tiles/profile-img1.jpg">
+            <img alt="" title="" class="img2" src="images/tiles/profile-img.jpg">
+          </div>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+        <div class="tile nav-tile tile-01  porto-bg-one">
+          <a class="tile-nav scroll-link" href="#about" data-soffset="0">
+            <div class="nav-hover porto-bg-four">
+                <h5>Hello, I am P G K Sunil Kumar. A freelance web designer / Web Application Developer.</h5>
+             </div>
+            <span>About Me</span>
+            <img alt="" title="" src="images/icons/01.png"/>
+          </a>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+        <div class="tile tile-01 thumb">
+          <div class="tile-nav flipX">
+            <img alt="" title="" class="img1" src="images/tiles/03a.jpg">
+            <img alt="" title="" class="img2" src="images/tiles/03b.jpg">
+          </div>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+        <div class="tile nav-tile tile-01  porto-bg-two">
+          <a class="tile-nav scroll-link" href="#portfolio" data-soffset="0">
+            <div class="nav-hover porto-bg-four">
+                <h5>27 Applications, 87 Websites & 52 Illustrations</h5>
+             </div>
+            <span>My Portfolio</span>
+            <img alt="" title="" src="images/icons/06.png"/>
+          </a>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+         <div class="tile transparent">
+        </div>
+       <!-- Tile : Ends -->
+
+
+       <!-- Tile : Starts -->
+        <div class="slogan tile-03   text-left">
+          <div class="inner">
+            <h1>P G K Sunil Kumar</h1>
+          <h3>web designer / Web Application Developer.</h3>
+          </div>
+        </div>
+       <!-- Tile : Ends -->
+        
+       <!-- Tile : Starts -->
+        <div class="tile nav-tile tile-01  porto-bg-three">
+          <a class="tile-nav scroll-link" href="#services" data-soffset="0">
+            <div class="nav-hover porto-bg-four">
+                <h5>Web Design / iPhone Application / Graphic Design / Android Application</h5>
+
+             </div>
+            <span>My Services</span>
+            <img alt="" title="" src="images/icons/03.png"/>
+          </a>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+        <div class="tile tile-01 thumb">
+          <div class="tile-nav flipX">
+            <img alt="" title="" class="img1" src="images/tiles/02b.jpg">
+            <img alt="" title="" class="img2" src="images/tiles/02b.jpg">
+          </div>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+        <div class="tile tile-01 thumb">
+          <div class="tile-nav flipY">
+            <img alt="" title="" class="img1" src="images/tiles/05a.jpg">
+            <img alt="" title="" class="img2" src="images/tiles/05b.jpg">
+          </div>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+         <div class="tile nav-tile tile-01 porto-bg-six">
+          <a class="tile-nav scroll-link" href="#testimonials" data-soffset="0">
+            <div class="nav-hover porto-bg-four">
+                <h5>Customer love us, Happy Words</h5>
+
+             </div>
+            <span>Testimonials</span>
+            <img alt="" title="" src="images/icons/02.png"/>
+          </a>
+        </div>
+       <!-- Tile : Ends -->
+
+       
+
+
+        <!-- Tile : Starts -->
+        <div class="tile tile-01 thumb">
+          <div class="tile-nav flipX">
+            <img alt="" title="" class="img1" src="images/tiles/01a.jpg">
+            <img alt="" title="" class="img2" src="images/tiles/01b.jpg">
+          </div>
+        </div>
+       <!-- Tile : Ends -->
+
+                
+        <!-- Tile : Starts -->
+        <div class="tile nav-tile tile-01 porto-bg-five">
+          <a href="#profile" class="tile-nav">
+            <div class="nav-hover porto-bg-four">
+                <h5>Our Professional Skills and Education</h5>
+
+             </div>
+            <span>Profile Page</span>
+            <img alt="" title="" src="images/icons/04.png"/>
+          </a>
+        </div>
+       <!-- Tile : Ends -->
+        <!-- Tile : Starts -->
+         <div class="tile tile-01 thumb">
+          <div class="tile-nav flipY">
+            <img alt="" title="" class="img1" src="images/tiles/06a.jpg">
+            <img alt="" title="" class="img2" src="images/tiles/06b.jpg">
+          </div>
+        </div>
+       <!-- Tile : Ends -->
+
+        <!-- Tile : Starts -->
+        <div class="tile nav-tile tile-01 porto-bg-eight">
+          <a class="tile-nav scroll-link" href="#contact" data-soffset="0">
+            <div class="nav-hover porto-bg-four">
+                <h5>Have a question or message for me?</h5>
+          
+             </div>
+            <span>Contact Me</span>
+            <img alt="" title="" src="images/icons/05.png"/>
+          </a>
+        </div>
+       <!-- Tile : Ends -->
+        
       </div>
-      <!--- window --->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="btn btn-danger window-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-stop"></span></button>
-                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-minus"></span></button>
-                  <h4 class="modal-title"><img src="1.jpg" width="40px" class="window-icon"/><span class="window-title"></span></h4>
-               </div>
-               <div class="modal-body">
-                  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!---End Window--->
-      <!---Mesaages window --->
-      <div class="modal fade" id="message_window" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow:hidden !important;">
-         <div class="modal-dialog ms-main-outer-part">
-            <div class="modal-content">
-               <div class="modal-header ms-header-tilte">
-                  <button type="button" class="btn btn-danger window-close-btn" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-stop"></span></button>
-                  <button type="button" class="btn window-btn-all" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-minus"></span></button>
-                  <!---  <h4 class="modal-title"><img src="1.jpg" width="40px" class="window-icon"/><span class="ms-window-title">Messages</span></h4>--->
-               </div>
-               <div class="modal-body ms-main-show-inner-part">
-                  <div class="card m-b-0" id="messages-main" style="margin-top:-10px;">
-                     <div class="ms-menu"  style="overflow:scroll; overflow-x: hidden;" id="ms-scrollbar">
-                        <div class="ms-block">
-                           <div class="ms-user">
-                              <img src="./images/avatar.jpg" alt=""> 
-                              <h5 class="q-title" align="center">pgksunilkumar<br/><b>5</b> New Messages</h5>
-                           </div>
-                        </div>
-                        <div class="ms-block">
-                           <a class="btn btn-primary btn-block ms-new" href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp; New Message</a>
-                        </div>
-                        <hr/>
-                        <div class="listview lv-user m-t-20">
-                           <div class="lv-item media active">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/bhai.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title">pgksunilkumar</div>
-                                 <div class="lv-small"> their is a windows10 application</div>
-                              </div>
-                           </div>
-                           <div class="lv-item media">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/ajit.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title"><b>pgksunilkumar</b><span class="pull-right">10 new</div>
-                                 <div class="lv-small"><b>Hello bro whatsup , how are you</b></div>
-                              </div>
-                           </div>
-                           <div class="lv-item media">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/chota.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title"><b>pgksunilkumar</b><span class="pull-right">2 new</span></div>
-                                 <div class="lv-small"><b>aur bhai collage kse chale rhai hai </b></div>
-                              </div>
-                           </div>
-                           <div class="lv-item media">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/sumit.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title">pgksunilkumar</div>
-                                 <div class="lv-small">aur suna kya haal hai bhai, aur</div>
-                              </div>
-                           </div>
-                           <div class="lv-item media">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/sega.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title">pgksunilkumar</div>
-                                 <div class="lv-small">abey kaha chala gya ?? mar gya kya ??</div>
-                              </div>
-                           </div>
-                           <div class="lv-item media">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/gan.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title">pgksunilkumar</div>
-                                 <div class="lv-small">yeh ley eamil address pgksunilkumar@gmail.com</div>
-                              </div>
-                           </div>
-                           <div class="lv-item media">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/vasu.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title">pgksunilkumar</div>
-                                 <div class="lv-small">kal se classess start hai koi holiday nahi hai </div>
-                              </div>
-                           </div>
-                           <div class="lv-item media">
-                              <div class="lv-avatar pull-left">
-                                 <img src="./images/abc.jpg" alt="">
-                              </div>
-                              <div class="media-body">
-                                 <div class="lv-title">Deepu Singh</div>
-                                 <div class="lv-small">okk byee gud night dude kal baaat karte hai  </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="ms-body">
-                        <div class="listview lv-message">
-                           <div class="lv-header-alt clearfix">
-                              <div id="ms-menu-trigger">
-                                 <div class="line-wrap">
-                                    <div class="line top"></div>
-                                    <div class="line center"></div>
-                                    <div class="line bottom"></div>
-                                 </div>
-                              </div>
-                              <div class="lvh-label hidden-xs">
-                                 <div class="lv-avatar pull-left">
-                                    <img src="./images/bhai.jpg" alt="">
-                                 </div>
-                                 <span class="c-black">Ashwani Singh Yadav<span style=" margin-left:8px; position:absolute; margin-top:12px;width: 8px;height: 8px;line-height: 8px;    border-radius: 50%; background-color:#80d3ab;"></span></span>
-                              </div>
-                              <ul class="lv-actions actions list-unstyled list-inline">
-                                 <li>
-                                    <a data-toggle="dropdown" href="#" ><span class="glyphicon glyphicon-list"></span></a>
-                                    <ul class="dropdown-menu noti-detail" role="menu">
-                                       <li>
-                                          <a href="">Latest</a>
-                                       </li>
-                                       <li>
-                                          <a href="">Oldest</a>
-                                       </li>
-                                    </ul>
-                                 </li>
-                                 <li>
-                                    <a data-toggle="dropdown" href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left"><span class="glyphicon glyphicon-trash"></span></a>
-                                    <ul class="dropdown-menu noti-detail" role="menu">
-                                       <li>
-                                          <a href="">Delete Messages</a>
-                                       </li>
-                                    </ul>
-                                 </li>
-                              </ul>
-                           </div>
-                           <div class="lv-body" id="ms-scrollbar" style="overflow:scroll; overflow-x: hidden; height:520px;">
-                              <div class="lv-item media">
-                                 <div class="lv-avatar pull-left">
-                                    <img src="./images/bhai.jpg" alt="">
-                                 </div>
-                                 <div class="media-body">
-                                    <div class="ms-item">
-                                       <span class="glyphicon glyphicon-triangle-left" style="color:#000000;"></span>
-                                       We have an aim to educate and provide you the power to make website anything. Anytime. We don't teach, we educate.We provide Tutorials for many Programming languages on our website.
-                                    </div>
-                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 09:00</small>
-                                 </div>
-                              </div>
-                              <div class="lv-item media right">
-                                 <div class="lv-avatar pull-right">
-                                    <img src="./images/avatar.jpg" alt=""> 
-                                 </div>
-                                 <div class="media-body">
-                                    <div class="ms-item">
-                                       We started this site with clear mission that we want to deliver complete details knowledge of Programming to our audience. We are sharing this knowledge in all areas that you can see in our site.
-                                    </div>
-                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 09:30</small>
-                                 </div>
-                              </div>
-                              <div class="lv-item media">
-                                 <div class="lv-avatar pull-left">
-                                    <img src="./images/bhai.jpg" alt="">
-                                 </div>
-                                 <div class="media-body">
-                                    <div class="ms-item">
-                                       It's gives the power to synthesis anything anywhere you want to. Its the ultimate tool to solve any problem. And we help you excel in that by working with you.
-                                    </div>
-                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 20/02/2015 at 09:33</small>
-                                 </div>
-                              </div>
-                              <div class="lv-item media right">
-                                 <div class="lv-avatar pull-right">
-                                    <img src="./images/avatar.jpg" alt="">
-                                 </div>
-                                 <div class="media-body">
-                                    <div class="ms-item">
-                                       The basic essence of life is to learn, explore and synthesis. We provide you with the tools to make your dreams come true.Our website is totally for free and available 24/7 and does not consume your data packs and works like a charm on the supersonic lovely internet.
-                                    </div>
-                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 10:10</small>
-                                 </div>
-                              </div>
-                              <div class="lv-item media">
-                                 <div class="lv-avatar pull-left">
-                                    <img src="./images/bhai.jpg" alt="">
-                                 </div>
-                                 <div class="media-body">
-                                    <div class="ms-item">
-                                       Acadnote a world class website is processing surveys for every student who wants to do something new and different in the field of academics. so it is a right place for every student to share their opinions about their present academics so this website can provide every single student requirements and it is possible for us to do if every student explains about their academics requirements. Last but not the least tell the needs and collect your study materials which we will provide to you. 
-                                    </div>
-                                    <small class="ms-date"><span class="glyphicon glyphicon-time"></span>&nbsp; 05/10/2015 at 10:24</small>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="clearfix"></div>
-                           <div class="lv-footer ms-reply">
-                              <textarea rows="10" placeholder="Write messages..."></textarea>
-                              <button class=""><span class="glyphicon glyphicon-send"></span></button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      </div>
-      <!---End Window--->
-      <h1 class="author">Windows 10 windows modal</h1>
-      <div class="started-bar">
-      <div class="row">
-         <div class="col-lg-3">
-            <div class="btn-group dropup">
-               <button type="button" class="btn btn-warning	dropdown-toggle start-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Start
-               </button>
-               <div class="dropdown-menu" id="startmenu">
-                  <div class="row main-bg">
-                     <div class="col-lg-4">
-                        <div class="row">
-                           <div class="col-lg-4 left-user-flmenu">
-                              <img src="1.jpg" class="user-pic"/>
-                              <b class="left-user-name">pgksunilkumar</b>
-                              <span class="glyphicon glyphicon-off left-user-flmenu-icon"></span>
-                           </div>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-book left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">Book Store</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-folder-open left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">Documents</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-folder-close left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">Downloads</b>
-                              </div>
-                           </a>
-                        </div>
-                        <div class="row">
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-bullhorn left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">BullHorn</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-compressed left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">Compressed</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-phone-alt left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">Telphone</b>
-                              </div>
-                           </a>
-                        </div>
-                        <div class="row">
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-comment left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">Comments</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-4 left-list-flmenu">
-                                 <span class="glyphicon glyphicon-cog left-list-flmenu-icon"></span>
-                                 <b class="left-list-cat-name">PC Settings</b>
-                              </div>
-                           </a>
-                           <div class="col-lg-4 left-search-flmenu">
-                              <input type="text" class="search" placeholder="Search..." />
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-lg-8" style="overflow-x:hidden; overflow-y: scroll; height:600px;" id="fl-scroll">
-                        <div class="row">
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 lg-flmenu flmenu3" align="center">
-                                 <span class="glyphicon glyphicon-headphones lg-span-icon"></span><br/>
-                                 <b class="lg-title">Music Player</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu2" align="center">
-                                 <span class="glyphicon glyphicon-volume-off span-icon"></span><br/>
-                                 <b>Volumne off</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#message_window">
-                              <div class="col-lg-1 flmenu flmenu1" align="center">
-                                 <span class="glyphicon glyphicon-envelope span-icon"></span><br/>
-                                 <b>Messages</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu4" align="center">
-                                 <span class="glyphicon glyphicon-plane span-icon"></span><br/>
-                                 <b>Aeroplane</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu5" align="center">
-                                 <span class="glyphicon glyphicon-hdd span-icon"></span><br/>
-                                 <b>Hard Disk Drive</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu6" align="center">
-                                 <span class="glyphicon glyphicon-camera span-icon"></span><br/>
-                                 <b>Camera</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu7" align="center">
-                                 <span class="glyphicon glyphicon-picture span-icon"></span><br/>
-                                 <b>Picture</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu8" align="center">
-                                 <span class="glyphicon glyphicon-bullhorn span-icon"></span><br/>
-                                 <b>Bullhorn</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu9" align="center">
-                                 <span class="glyphicon glyphicon-trash span-icon"></span><br/>
-                                 <b>Remove</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 md-flmenu flmenu10" align="center">
-                                 <span class="glyphicon glyphicon-qrcode md-span-icon"></span><br/>
-                                 <b class="md-title">Qcode Reader</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 md-flmenu flmenu11" align="center">
-                                 <span class="glyphicon glyphicon-print md-span-icon"></span><br/>
-                                 <b class="md-title">Printer</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 lg-flmenu flmenu12" align="center">
-                                 <span class="glyphicon glyphicon-film lg-span-icon"></span><br/>
-                                 <b class="lg-title">Movies</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu13" align="center">
-                                 <span class="glyphicon glyphicon-download-alt span-icon"></span><br/>
-                                 <b>Downloads</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu14" align="center">
-                                 <span class="glyphicon glyphicon-phone span-icon"></span><br/>
-                                 <b>Mobile</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu15" align="center">
-                                 <span class="glyphicon glyphicon-refresh span-icon"></span><br/>
-                                 <b>Refresh</b>
-                              </div>
-                           </a>
-                           <a data-toggle="modal" href="#myModal">
-                              <div class="col-lg-1 flmenu flmenu16" align="center">
-                                 <span class="glyphicon glyphicon-inbox span-icon"></span><br/>
-                                 <b>Email</b>
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!---Left Side Optionns--->
-         <div class="col-lg-8">
-            <div class="row">
-               <div class="col-lg-4">
-               </div>
-               <div class="col-lg-4">
-               </div>
-               <div class="col-lg-1">
-               </div>
-               <div class="col-lg-3">
-                  <!--- Show icons--->
-                  <div class="dropup">
-                     <span class="glyphicon glyphicon-play dropdown-toggle show-icons-all" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
-                     <div class="dropdown-menu noti-main">
-                        <div class="noti-show">
-                           <div class="row">
-                              <div class="col-lg-4 noti-show-icon">
-                                 <span class="glyphicon glyphicon-trash noti-icon"></span>
-                              </div>
-                              <div class="col-lg-4 noti-show-icon">
-                                 <span class="glyphicon glyphicon-compressed noti-icon"></span>
-                              </div>
-                              <div class="col-lg-4 noti-show-icon">
-                                 <span class="glyphicon glyphicon-download-alt noti-icon"></span>
-                              </div>
-                           </div>
-                           <div class="row">
-                              <div class="col-lg-4 noti-show-icon">
-                                 <span class="glyphicon glyphicon-headphones noti-icon"></span>
-                              </div>
-                              <div class="col-lg-4 noti-show-icon">
-                                 <span class="glyphicon glyphicon-print noti-icon"></span>
-                              </div>
-                              <div class="col-lg-4 noti-show-icon">
-                                 <span class="glyphicon glyphicon-camera noti-icon"></span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!--- End icons--->
-                  <!--- network icons--->
-                  <div class="dropup">
-                     <span class="glyphicon glyphicon-signal dropdown-toggle network-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
-                     <div class="dropdown-menu network-outer-part">
-                        <div class="network-main">
-                           <div class="row">
-                              <div class="col-lg-4 network-avail">
-                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
-                                 <b class="network-avail-name">Kirans Mens Hostels</b>
-                              </div>
-                              <div class="col-lg-4 network-avail">
-                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
-                                 <b class="network-avail-name">Thub</b>
-                              </div>
-                              <div class="col-lg-4 network-avail">
-                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
-                                 <b class="network-avail-name">Thub Catalyst</b>
-                              </div>
-                              <div class="col-lg-4 network-avail">
-                                 <span class="glyphicon glyphicon-signal network-avail-icon"></span>
-                                 <b class="network-avail-name">Thub Guest User</b>
-                              </div>
-                           </div>
-                           <h4 style="color:#f5f5f5">Network Settings</h4>
-                           <div class="row">
-                              <div class="col-lg-12" >
-                                 <button type="button" class="btn btn-info net-set-btn"><span class="glyphicon glyphicon-signal net-set-icon"></span><br/>Available</button>&nbsp;&nbsp;<button type="button" class="btn net-set-btn"><span class="glyphicon glyphicon-plane net-set-icon-aero"></span><br/>Airplane Mode</button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!--- networks icons--->
-                  <!---Volume--->
-                  <div class="dropup">
-                     <span class="glyphicon glyphicon-volume-down dropdown-toggle volume-icon" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
-                     <div class="dropdown-menu volume-none" aria-labelledby="dropdownMenu2">
-                        <span id="valBox" class="info-volume"></span>
-                        <div class="volume-bg">
-                           <div class="volume">
-                              <input type="range" min="0" max="100" class="volume-settings" onChange="showVal(this.value)">
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!---End Volume--->
-                  <span class="time" id="fl-time"></span> 
-               </div>
-            </div>
-         </div>
-      </div>
+      <!-- stripe :ends-->
+
+          
+  </section>
+</section>
+<!-- HOME : ENDS -->
+
+
+<!-- ABOUT : STARTS -->
+<section id="about" class="page-section navigation-fadeIn">
+
+
+      <section class="container">
+<div class="block row">
+      
+          <article class="text-left">
+            <h2 class="page-heading">About me</h2>
+            <div class="liner"><span></span></div>
+          </article>
+
+
+        <div class="row add-top">
+        <div class="col-md-4"><img alt="profile" title="" src="images/tiles/profile-img1.jpg"/></div>
+        <div class="col-md-4"><div class="info-block">
+       <ul>
+       <li class="name"><strong>P G K Sunil Kumar</strong></li>
+       <li class="phone">+91 9550946216</li>
+       <li class="email">pgksunilkumar@gmail.com</li>
+       <li class="address">Hyderabad</li>
+        <li><div class="social-buttons">
+     <a class="facebook" href="#" target="_blank"></a>
+     <a class="twitter" href="#" target="_blank"></a>
+     <a class="google-plus" href="#" target="_blank"></a>
+     <a class="rss" href="#" target="_blank"></a>
+     <a class="pintrest" href="#" target="_blank"></a>
+
+
+     </div></li>
+       </ul>
+       </div>
+       </div>
+          <article class="col-md-4 text-left">
+            <p class="welcome-text"><span>Hello, I am P G K Sunil Kumar. Senior Web Developer specializing in front end development.</span> Experienced with all stages of the 
+development cycle for dynamic web projects. Well-versed in numerous programming languages including JavaScript, SQL,
+and C. Stng background in project management and customer relations.</p>
+<br>
+<!-- <img alt="sign" title="" src="images/signature.png" style="width:auto"/>
+ -->          </article>
+        </div>
+
+
+        <div class=" add-top">
+		<div class="row">
+          <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>Angular JS</span></div>
+          </article>
+		  <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>Javascript</span></div>
+          </article>
+          <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart2" data-percent="94">94%<span>Jquery</span></div>
+          </article>
+          <article class="col-md-3  col-xs-6 text-center">
+            <div class="chart3" data-percent="79">79%<span>HTML5</span></div>
+          </article>
+		  </div>
+		   <div style="margin-top:35px;"></div>
+		  <div class="row">
+		 
+          <article class="col-md-3  col-xs-6 text-center">
+            <div class="chart4" data-percent="88">88%<span>CSS3</span></div>
+          </article>
+		  <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>BootStrap</span></div>
+          </article>
+		  <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>SEO</span></div>
+          </article>
+		  <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>SEM</span></div>
+          </article>
+		  
+		  </div>
+		   <div style="margin-top:35px;"></div>
+		  <div class="row">
+		   <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>Google Adwords</span></div>
+          </article>
+		  <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>Node js</span></div>
+          </article>
+		  <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>PHP</span></div>
+          </article>
+		  <article class="col-md-3 col-xs-6 text-center">
+            <div class="chart1" data-percent="86">86%<span>MySql</span></div>
+          </article>
+		  </div>
+        </div>
+
+
+        
 </div>
-<script type="text/javascript">
-  window.onload = function(){getTime();}  
-         function getTime(){  
-         var display = new Date();  
-         var h = display.getHours();  
-         var m = display.getMinutes();  
-         m = checkTime(m);  
-         document.getElementById('fl-time').innerHTML=h+":"+m;  
-         setTimeout(function(){getTime()},1000);  
-         }  
-         function checkTime(i){  
-         if (i<10){  
-           i="0" + i;  
-          }  
-         return i;  
-         }  
+        
+      </section>
+          
+</section>
+<!-- ABOUT : ENDS -->
+
+
+
+
+
+
+
+
+
+
+<!-- PORTFOLIO : STARTS -->
+<section id="portfolio" class="page-section">
+
+      <section class="container">
+<div class="block row">
+        <div class="row">
+          <article class="col-md-12 text-left">
+            <h2 class="page-heading">my portfolio</h2>
+            <div class="liner"><span></span></div>
+          </article>
+        </div>
+
+        <div class="row add-top add-bottom">
+          <article class="col-md-12 text-left">
+            <p class="welcome-text">I have worked for more than 50 clients over last 2 years. Explore my best works here</p>
+          </article>
+        </div>
+
+ 
+
+
+    <div class="porto-bg-eleven common-pad">
+
+          <article class="text-left ">
+            <!-- Container element for a single portfolio item. Do not remove! -->
+
+
+            <!-- Filter -->
+             <div id="filter" class="clearfix">
+                  <div id="filter_wrapper">
+                       <ul id="portfolioFilter">
+                           <li class="active"><a href="#" class="all"><span class="current">All</span></a></li>
+                           <li class="separator">/</li>
+                           <li><a href="#" class="category1"><span>Web Design</span></a></li>
+                           <li class="separator">/</li>
+                           <li><a href="#" class="category2"><span>Graphic</span></a></li>
+                           <li class="separator">/</li>
+                           <li><a href="#" class="category3"><span>iPhone</span></a></li>
+                           <li class="separator">/</li>
+                           <li><a href="#" class="category4"><span>Logo Design</span></a></li>
+                           <li class="separator">/</li>
+                           <li><a href="#" class="category5"><span>Illustrator</span></a></li>
+                           <li class="separator">/</li>
+                           <li><a href="#flickr-panel" class="scroll-link" data-soffset="90"><span>Printing</span></a></li>
+                       </ul>
+                  </div>
+             </div>
+             <!-- End: Filter -->
+          </article>
+    </div>
+
+
+        <div class="">
+          <section id="portfolio-wrap" class="clearfix">
+
+    
+    
+     
+
+     <!-- Thumbnails -->
+     <div id="portfolio_thumbs">
+     
+          <ul class="sortablePortfolio clearfix">
+
+              <!-- 1st thumb -->
+              <li data-type="category1" class="simple-bg-one">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio1.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio1_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-one">Project TItle</span></a></h3>
+                       <p><span>image slider</span></p>
+                  </div>
+              </li>
+              
+              <!-- 2nd thumb -->
+              <li data-type="category2" class="simple-bg-two">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio2.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio2_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-two">Project TItle</span></a></h3>
+                       <p><span>youtube</span></p>
+                  </div>
+              </li>
+              
+              <!-- 3rd thumb -->
+              <li data-type="category3" class="simple-bg-three">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio3.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio3_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-three">Project TItle</span></a></h3>
+                       <p><span>vimeo</span></p>
+                  </div>
+              </li>
+              
+              <!-- 4th thumb -->
+              <li data-type="category1" class="simple-bg-four">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio4.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio4_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-four">Project TItle</span></a></h3>
+                       <p><span>image slider</span></p>
+                  </div>
+              </li>
+              
+              <!-- 5th thumb -->
+              <li data-type="category4" class="simple-bg-five">
+                  <!-- Thumbnail -->
+                  <a href="#" data-gal="prettyPhoto[gallery]">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio5.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio5_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" data-gal="prettyPhoto[gallery]"><span class="porto-bg-five">Project TItle</span></a></h3>
+                       <p><span>lightbox image</span></p>
+                  </div>
+              </li>
+              
+              <!-- 6th thumb -->
+              <li data-type="category2" class="simple-bg-six">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio6.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio6_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-six">Project TItle</span></a></h3>
+                       <p><span>youtube</span></p>
+                  </div>
+              </li>
+              
+              <!-- 7th thumb -->
+              <li data-type="category5" class="simple-bg-seven">
+                  <!-- Thumbnail -->
+                  <a href="#" data-gal="prettyPhoto[gallery]">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio7.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio7_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" data-gal="prettyPhoto[gallery]"><span class="porto-bg-seven">Project TItle</span></a></h3>
+                       <p><span>lightbox video</span></p>
+                  </div>
+              </li>
+              
+              <!-- 8th thumb -->
+              <li data-type="category1" class="simple-bg-eight">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio8.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio8_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-eight">Project TItle</span></a></h3>
+                       <p><span>photography</span></p>
+                  </div>
+              </li>
+              
+              <!-- 9th thumb -->
+              <li data-type="category3" class="simple-bg-one">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio9.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio9_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-nine">Project TItle</span></a></h3>
+                       <p><span>vimeo</span></p>
+                  </div>
+              </li>
+              
+              <!-- 10th thumb -->
+              <li data-type="category2" class="simple-bg-two">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio10.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio10_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-ten">Project TItle</span></a></h3>
+                       <p><span>youtube</span></p>
+                  </div>
+              </li>
+              
+              <!-- 11th thumb -->
+              <li data-type="category1" class="simple-bg-three">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio11.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio11_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-one">Project TItle</span></a></h3>
+                       <p><span>photography</span></p>
+                  </div>
+              </li>
+              
+              <!-- 12th thumb -->
+              <li data-type="category2" class="simple-bg-four">
+                  <!-- Thumbnail -->
+                  <a href="#" class="more_info">
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio12.jpg"/>
+                     <img alt="simple" title="simple" src="images/portfolio_thumbs/portfolio12_rollover.jpg" class="rollover" />
+                  </a>
+                  <!-- Info -->
+                  <div class="item_info">
+                       <h3><a href="#" class="more_info"><span class="porto-bg-twelve">Project TItle</span></a></h3>
+                       <p><span>youtube</span></p>
+                  </div>
+              </li>
+              
+
+          </ul>
+
+     </div>
+     <!-- End: Thumbnails -->
+            
+   
+  </section>  
+        </div>
+</div>
+      </section>  
+</section>
+<!-- PORTFOLIO : ENDS -->
+
+
+
+
+
+
+
+<!-- SERVICES : STARTS -->
+<section id="services" class="page-section">
+
+
+      <section class="container">
+
+        <div class="row">
+          <article class="col-md-12 text-left">
+            <h2 class="page-heading">my services</h2>
+            <div class="liner"><span></span></div>
+          </article>
+        </div>
+
+        <div class="row add-top add-bottom">
+          <article class="col-md-12 text-left">
+            <p class="welcome-text">I offer premium services, I can produce quality websites, designs, apps and artworks</p>
+          </article>
+        </div>
+
+        <div class="row add-top">
+          <article class="col-md-12">
+
+         <ul id="rb-grid" class="rb-grid clearfix">
+
+          <li class="rb-span-2 porto-bg-one">
+            <h3>Web Design</h3><span class="rb-temp">HTML5 / CSS3/ JS</span>
+            <img alt="" title="" class="service-thumb" src="images/services/01.png"/>
+
+
+          </li>
+
+          <li class="porto-bg-two">
+            <h3>Print Design</h3><span class="rb-temp">Photoshop</span>
+            <img alt="" title="" class="service-thumb" src="images/services/02.png"/>
+            
+            <!-- rb : ends -->
+            
+          </li>
+
+          <li class="porto-bg-three">
+            <h3>Logo Brand</h3><span class="rb-temp">CorelDraw</span>
+            <img alt="" title="" class="service-thumb" src="images/services/03.png"/>
+            
+            <!-- rb : ends -->
+            
+          </li>
+
+          <li class="rb-span-4 porto-bg-six">
+            <h3>CMS Site</h3><span class="rb-temp">PHP / WordPress / Joomla</span>
+            <img alt="" title="" class="service-thumb" src="images/services/04.png"/>
+            
+            <!-- rb : ends -->
+            
+          </li>
+
+          <li class="rb-span-2 porto-bg-five">
+            <h3>Web Apps</h3><span class="rb-temp">Python / RoR</span>
+            <img alt="" title="" class="service-thumb" src="images/services/05.png"/>
+            
+            <!-- rb : ends -->
+            
+          </li>
+
+          <li class="rb-span-2 porto-bg-eight">
+            <h3>Mobile Apps</h3><span class="rb-temp">iOS / Android</span>
+            <img alt="" title="" class="service-thumb" src="images/services/06.png"/>
+            
+            <!-- rb : ends -->
+            
+          </li>
+
+        </ul>
+            
+          </article>
+          <!-- span : ends -->
+        </div>
+
+      </section>
+      <!-- container:ends -->
+
+          
+  
+</section>
+<!-- SERVICES : ENDS -->
+
+
+<!-- CONTACT : STARTS -->
+<section id="contact" class="page-section">
+
+
+      <section class="container">
+
+        <div class="row">
+          <article class="col-md-12 text-left">
+            <h2 class="page-heading">contact me</h2>
+            <div class="liner"><span></span></div>
+          </article>
+        </div>
+
+        <div class="row add-top add-bottom">
+          <article class="col-md-12 text-left">
+            <p class="welcome-text">I will reply to each and every email. If you have projects feel free to call me anytime</p>
+          </article>
+        </div>
+
+        <div class="row add-top">
+
+            <article class="col-md-12 contact-panel">
+
+               <div class="row">
+                <article class="col-md-12 text-center">
+                            <div id="fname"  class="alert alert-error error">
+                            Name must not be empty
+                            </div>
+                            <div id="fmail" class="alert alert-error  error">
+                            Please provide a valid email
+                            </div>
+                            <div id="fmsg" class="alert alert-error  error">
+                            Message should not be empty
+                            </div>
+                        </article>
+                </div>
+
+              <form name="myform" id="contactForm" action="http://themesground.com/porto-demo/sendcontact.php" enctype="multipart/form-data" method="post"> 
+                <div class="row add-top-small">
+                  <article class="col-md-6">
+                    <input size="100" type="text" name="name" id="name" placeholder="Name">
+                  </article>
+                  <article class="col-md-6">
+                            <input type="text"  size="30" id="email" name="email" placeholder="email">
+                  </article>
+                </div>
+                <div class="row add-top-small">
+                  <article class="col-md-12">
+                            <textarea  id="msg" rows="3" cols="40" name="message" placeholder="Message"></textarea>
+                            <button type="submit" name="submit" id="submit" class="btn btn-porto add-top-half">Send Message</button>
+                  </article>
+                </div>
+              </form>
+
+            </article>
+
+        </div>
+
+      </section> 
+
+          
+
+</section>
+<!-- CONTACT : ENDS -->
+
+
+
+<!-- QUOTES : STARTS -->
+<section id="testimonials" class="page-section">
+
+
+      <section class="container">
+      <div class="row">
+          <article class="col-md-12 text-left">
+            <h2 class="page-heading">happy words</h2>
+            <div class="liner"><span></span></div>
+          </article>
+        </div>
+
+        <div class="row">
+
+          <article class="col-md-12 text-left">
+            
+            <div id="cbp-qtrotator" class="cbp-qtrotator">
+          <div class="cbp-qtcontent">
+            <img alt="" title="" src="images/testimonials/01.jpg"  />
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra.</p>
+              <footer>Jhon Doe</footer>
+            </blockquote>
+          </div>
+          <div class="cbp-qtcontent">
+            <img alt="" title="" src="images/testimonials/02.jpg"  />
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra.</p>
+              <footer>Saraha Smith</footer>
+            </blockquote>
+          </div>
+          <div class="cbp-qtcontent">
+            <img alt="" title="" src="images/testimonials/03.jpg"  />
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique ultrices semper. Integer venenatis erat at sodales pharetra.</p>
+              <footer>Mark Doe</footer>
+            </blockquote>
+          </div>
+        </div>
+
+          </article>
+          <!-- span : ends -->
+        </div>
+
+        
+
+      </section>
+      <!-- container:ends -->
+
+          
+</section>
+<!-- QUOTES : ENDS -->
+
+
+<section id="profile" class="page-section navigation-fadeIn" data-stellar-background-ratio="2" >
+<section class="container">
+    <div class="row">
+
+      <section class="container">
+
+        <div class="row">
+          <article class="col-md-12 text-left">
+            <h2 class="page-heading">my profile</h2>
+            <div class="liner"><span></span></div>
+          </article>
+        </div>
+
+        
+
+        <div class="row add-top">
+          <article class="col-md-12 text-left">
+            <p class="welcome-text fx fx-rollIn animated rollIn">I am John, a young web designer who focuses on crafting experiences and interfaces.</p>
+          </article>
+        </div>
+
+        <div class="row add-top">
+          <article class="col-md-12 text-left">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </article>
          
-         
-          var mozilla=document.getElementById && !document.all
-         var ie=document.all
-         var contextisvisible=0
-         
-         function iebody(){
-         return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
-         }
-         
-         function displaymenu(e){
-         el=document.getElementById("context_menu")
-         contextisvisible=1
-         if (mozilla){
-         el.style.left=pageXOffset+e.clientX+"px"
-         el.style.top=pageYOffset+e.clientY+"px"
-         el.style.visibility="visible"
-         e.preventDefault()
-         return false
-         }
-         else if (ie){
-         el.style.left=iebody().scrollLeft+event.clientX
-         el.style.top=iebody().scrollTop+event.clientY
-         el.style.visibility="visible"
-         return false
-         }
-         }
-         
-         function hidemenu(){
-         if (typeof el!="undefined" && contextisvisible){
-         el.style.visibility="hidden"
-         contextisvisible=0
-         }
-         }
-         
-         if (mozilla){
-         document.addEventListener("contextmenu", displaymenu, true)
-         document.addEventListener("click", hidemenu, true)
-         }
-         else if (ie){
-         document.attachEvent("oncontextmenu", displaymenu)
-         document.attachEvent("onclick", hidemenu)
-         }
-         
-          function showVal(newVal){
-         document.getElementById("valBox").innerHTML=newVal;
-         }
-</script>
+        </div>
+
+
+        <div class="row add-top">
+          <article class="col-md-10 col-xs-6 text-left skill-desc">
+            <h3 class="porto-bg-eight">HTML5 / CSS3 / JS</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </article>
+          <article class="col-md-2 col-xs-6 text-left skill-wrap">
+            <div class="chart1 easyPieChart" data-percent="86" style="width: 140px; height: 140px; line-height: 140px;">86%<canvas width="140" height="140"></canvas></div>
+          </article>
+        </div>
+
+        <div class="row add-top">
+          <article class="col-md-10 col-xs-6 text-left skill-desc">
+            <h3 class="porto-bg-twelve">Photoshop</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </article>
+          <article class="col-md-2 col-xs-6 text-left skill-wrap">
+            <div class="chart2 easyPieChart" data-percent="94" style="width: 140px; height: 140px; line-height: 140px;">94%<canvas width="140" height="140"></canvas></div>
+          </article>
+        </div>
+
+        <div class="row add-top">
+          <article class="col-md-10 col-xs-6 text-left skill-desc">
+            <h3 class="porto-bg-five">CorelDraw</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </article>
+          <article class="col-md-2 col-xs-6 text-left skill-wrap">
+            <div class="chart4 easyPieChart" data-percent="88" style="width: 140px; height: 140px; line-height: 140px;">88%<canvas width="140" height="140"></canvas></div>
+          </article>
+        </div>
+
+        <div class="row add-top">
+          <article class="col-md-10 col-xs-6 text-left skill-desc">
+            <h3 class="porto-bg-three">Creative Suit</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </article>
+          <article class="col-md-2 col-xs-6 text-left skill-wrap">
+            <div class="chart3 easyPieChart" data-percent="79" style="width: 140px; height: 140px; line-height: 140px;">79%<canvas width="140" height="140"></canvas></div>
+          </article>
+        </div>
+
+
+
+        
+      </section>
+          
+    </div>
+
+
+  </section>
+</section>
+
+
+<!-- FOOTER : STARTS -->
+<footer id="mastfoot">
+
+          <section class="container">
+
+        <div class="row foot-border">
+               <p>sunil kumar</p>
+
+        </div>
+
+        
+
+       </section> 
+</footer>
+
+
+ 
+
+</section>
+<!-- mastwrap : ends -->
+
+<script src="javascripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="javascripts/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.js" ></script> 
+<script src="assets/js/bootstrap.min.js" ></script> 
+<script src="javascripts/responsive-nav.js" type="text/javascript" ></script>
+<script src="javascripts/jquery.stellar.js"></script>
+<script src="javascripts/prettyPhoto.js"></script>
+<script src="javascripts/flexslider.js"></script>
+<script src="javascripts/waypoints.min.js"></script>
+<script src="javascripts/jquery.tweet.js"></script>
+<script src="javascripts/portfolio.js"></script>
+<script src="javascripts/form-validation.js"></script>
+<script src="javascripts/responsive-nav.js"></script>
+<script src="javascripts/jquery.easy-pie-chart.js"></script>
+<script src="javascripts/jquery.cbpQTRotator.js"></script>
+<script src="javascripts/classie.js"></script>
+<script src="javascripts/jquery.fittext.js"></script>
+<script src="javascripts/jquery.flickr.js"></script>
+<script src="javascripts/effects.js"></script>
+<script src="javascripts/scroll.js"></script>
+<script src="javascripts/slidingmenu.js"></script>
+<script src="javascripts/script.js"></script>
+
+
+<script>
+        var navigation = responsiveNav("#nav", { // Selector: The ID of the wrapper
+          animate: true, // Boolean: Use CSS3 transitions, true or false
+          transition: 400, // Integer: Speed of the transition, in milliseconds
+          label: "Menu", // String: Label for the navigation toggle
+          insert: "after", // String: Insert the toggle before or after the navigation
+          customToggle: "", // Selector: Specify the ID of a custom toggle
+          openPos: "relative", // String: Position of the opened nav, relative or static
+          jsClass: "js", // String: 'JS enabled' class which is added to <html> el
+          init: function(){}, // Function: Init callback
+          open: function(){}, // Function: Open callback
+          close: function(){} // Function: Close callback
+        });
+    </script>
+
+
+<script>
+
+    // var mySwiper = new Swiper('.swiper-container',{ 
+    // mode:'horizontal',
+    // pagination: false,
+    // slidesPerView: 3,
+    // loop: true,
+    // calculateHeight: true
+    // });
+  
+  </script>
+
+  <script>
+      $( function() {
+       
+
+        $( '#cbp-qtrotator' ).cbpQTRotator();
+
+      } );
+    </script>
+
+
+
+  
+
+
 </body>
+
+<!-- Mirrored from themesground.com/porto-demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Nov 2016 10:13:57 GMT -->
 </html>
