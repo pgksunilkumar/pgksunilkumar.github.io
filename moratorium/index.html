@@ -1,0 +1,164 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EMI Moratorium Calculator</title>
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<script src="calculator.js"></script>
+	<style>
+		.financeImpact{
+			margin-bottom: 0px;
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="text-center">
+			<h1>EMI Moratorium Calculator</h1>
+		</div>
+		<div>
+			<form>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="loanAmt">Loan Amount </label>
+							<input class="form-control" type="number" name="loanAmt" id="loanAmt" placeholder="Please Enter the Loan Amount"
+								value="100000">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="roi">Rate of Interest </label>
+							<input class="form-control" type="number" name="roi" id="roi" placeholder="Please Enter the ROI" value="14">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="loanTenure">Loan Tenure (Months) </label>
+							<input class="form-control" type="number" name="loanTenure" id="loanTenure"
+								placeholder="Please Enter the Loan Tenure in Months" value="36">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="emiPaid">No. of EMIs Paid</label>
+							<input class="form-control" type="number" name="emiPaid" id="emiPaid" placeholder="EMIs Paid"
+								value="12">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="moratoriumPeriod">Moratorium Period Availed in Months</label>
+							<select id="moratoriumPeriod" name="moratoriumPeriod" class="form-control">
+								<option value="1">1 Month</option>
+								<option value="2">2 Months</option>
+								<option value="3">3 Months</option>
+								<option value="4">4 Months</option>
+								<option value="5">5 Months</option>
+								<option value="6" selected="">6 Months</option>
+							</select>
+						</div>
+						<div class="form-group" style="display: none;">
+							<label for="threshold">Threshold</label>
+							<select id="threshold" name="threshold" class="form-control">
+								<option value="400">400</option>
+								<option value="500" selected="">500</option>
+								<option value="600">600</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="row ">
+			<div class="col-md-12">
+				<div class="well row" style="background: green ;color: #FFFFFF;">
+					<div class="col-md-6">
+						<h4>Option 1</h4>
+						<p>No Moratorium Availed</p>
+					</div>
+					<div class="col-md-6 text-center">
+						<p style="margin-bottom: -18px; margin-top: -23px; font-size: 57px;color: red;">0.00</p>
+						<h4 class="financeImpact">Financial Impact</h4>
+					</div>
+				</div>
+
+				<div class="well row" style="background: rgba(255, 165, 0, 0.74) ;color: #000;">
+					<div class="col-md-6">
+						<h4>Option 2</h4>
+						<p style="color: red;font-weight: bold;">When Loan tenure remains same:</p>
+						<table class="table table-bordered">
+							<tbody style="color: #000; font-weight:bold;">
+								<tr>
+									<td>Current Payable EMI</td>
+									<td data-id="currentEmi">₹ 0.00</td>
+								</tr>
+								<tr>
+									<td>Revised Payable EMI</td>
+									<td id="revisedLoanEmi">₹ 0.00</td>
+								</tr>
+								<tr>
+									<td>Increase In EMI/month</td>
+									<td id="increaseEmiInMonths">₹ 0.00</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-6 text-center">
+						<p style="margin-bottom: -18px; margin-top: 56px; font-size: 57px;color: red;" data-id="financialImpactTd" id="option-five">0.00</p>
+						<h4 class="financeImpact">Financial Impact</h4>
+					</div>
+				</div>
+
+
+				<div class="well row" style="background: rgba(255, 165, 0, 0.74) ;color: #000;">
+					<div class="col-md-6">
+						<h4>Option 3</h4>
+						<p style="color: red;font-weight: bold;">When Loan tenure changes:</p>
+						<table class="table table-bordered">
+							<tbody style="color: #000; font-weight:bold;">
+								<tr>
+									<td>Current Payable EMI </td>
+									<td data-id="currentEmi">₹ 0.00</td>
+								</tr>
+								<tr>
+									<td>Original Loan Tenure</td>
+									<td data-id="originalBalTd">0</td>
+								</tr>
+								<tr>
+									<td>New Loan Tenure</td>
+									<td id="revisedTenure">0</td>
+								</tr>
+								<tr>
+									<td>No. Of Extra EMI's</td>
+									<td id="extraEmiPaid">0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-6 text-center">
+						<p style="margin-bottom: -18px; margin-top: 56px; font-size: 57px;color: red;" data-id="financialImpactTd" id="option-two">0.00</p>
+						<h4 class="financeImpact">Financial Impact</h4>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<footer style="background: #488fef;text-align: center;padding: 30px;color: #fff;">
+			<div>
+				<p> Made with ❤ by <a href="https://github.com/pgksunilkumar" target="_blank" style="color: #000;font-weight:bold;">P G K Sunil Kumar </a></p>
+			</div>
+		</footer>
+</body>
+
+</html>
